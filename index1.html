@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./index.css" type="text/css"> -->
+    <style>
+        body {
+            padding: 0px;
+            margin: 0px;
+            /* border: 1px solid red; */
+
+        }
+
+        header {
+            /* margin-top: 10px; */
+            /* border: 1px solid red; */
+            text-align: center;
+            background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+            height: 470px;
+            width: 100%;
+
+        }
+
+        .logo {
+            /* border: 1px solid red; */
+            margin-left: 50px;
+        }
+
+        nav{
+            border: 1px solid red;
+            
+        }
+
+        #contact-color{
+            color: #b5876d;
+        }
+
+        .header-one {
+            border: 1px solid red;
+            display: flex;
+            align-items: center;
+            height: 100px;
+            /* align-items: flex-end; */
+            justify-content: space-evenly;
+        }
+
+        .header-two {
+            border: 1px solid red;
+            /* margin: auto; */
+            height: 80%;
+            width: 50%;
+            padding-top: 10px;
+        }
+
+        .header-two .header-top {
+            border: 1px solid red;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .mainmenu-hidden ul {
+            /* display: flex; */
+            border: 1px solid red;
+            /* grid-template-columns: repeat(7, 1fr); */
+            /* align-self: flex-start; */
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown a:hover {
+            background-color: aliceblue;
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+        }
+
+        .submenu {
+            padding-top: 15px;
+            display: none;
+            position: absolute;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .mainmenu-hidden li {
+            list-style-type: none;
+        }
+
+        .submenu-megamenu {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .social-links i {
+            color: yellowgreen;
+        }
+
+        .breadcrumb {
+            list-style-type: none;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-one">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.webp" alt="">
+                </a>
+            </div>
+            <div class="header-two">
+                <div class="header-top">
+                    <div class="header-contact">
+                        <span id="contact-color">Contact:</span>
+                        <span>01234567898</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                        <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                        <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="mainmenu-hidden">
+                    <nav>
+
+                                <a href="index.html">HOME</a>
+                            
+                            <div class="dropdown">
+                                <a href="" class="dropdownbtn">ROOMS</a>
+                                <div class="submenu">
+                                    <a href="">ROOM LIST</a><br>
+                                    <a href="">ROOM DETAILS</a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown">
+                                <a href="">ACTIVITIES</a>
+                                <div class="submenu">
+                                    <div class="submenu-megamenu">
+                                        <div class="first">
+                                            <a href="#">MEGAMENU LIST</a>
+                                            <a href="">Location</a>
+                                            <a href="">Room Grid</a>
+                                            <a href="">Room List</a>
+                                            <a href="">Room Details</a>
+                                            <a href="">Mega Menu</a>
+
+                                        </div>
+
+                                        <div class="second">
+                                            <a href="#">MEGAMENU LIST</a>
+                                            <a href="">Event</a>
+                                            <a href="">Mega Menu</a>
+                                            <a href="">Contact</a>
+                                            <a href="">Team</a>
+                                            <a href="">Mega Menu</a>
+
+                                        </div>
+
+                                        <div class="second">
+                                            <a href="#">MEGAMENU LIST</a>
+                                            <a href="">Room List</a>
+                                            <a href="">Mega Menu</a>
+                                            <a href="">Room Grid</a>
+                                            <a href="">Room Details</a>
+                                            <a href="">Mega Menu</a>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="">LOCATION</a>
+                            <a href="">EVENT</a>
+                            <a href="">TEAM</a>
+                            <a href="">CONTACT</a>
+
+                        
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <section>
+            <div class="container">
+                <div class="center-text">
+                    <h1>OUR STAFF</h1>
+                    <p>A quality room of Oestin with sea or mountain view</p>
+                </div>
+                <div class="breadcrumb-bar">
+                    <ul class="breadcrumb">
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>Our Staff</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </header>
+
+
+
+    <section>
+        <div class="middle">
+            <div class="our-special-staff">
+                <h2>OUR SPECIAL STAFF</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis,
+                    eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
+            </div>
+            <div class="staff-data">
+                <!-- append the data here -->
+            </div>
+        </div>
+    </section>
+
+    <div class="client-image">
+        <div class="image">
+            <div>
+                <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/3.png"></a>
+            </div>
+            <div>
+                <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/3.png"></a>
+            </div>
+            <div>
+                <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
+            </div>
+            <div>
+                <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/4.png"></a>
+            </div>
+            <div>
+                <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h3>NEWSLETTER SIGN-UP</h3>
+            <div class="newsletter-imput">
+                <input type="text" placeholder="Enter your E-mail">
+                <input type="button" value="SUBSCRIBE">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
+        <div class="footer-container">
+            <div class="row">
+                <div class="first-cell">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="./logo.webp">
+                        </a>
+                    </div>
+                    <p>Lorem ipsumdolor sit amet, conse acteir our
+                        adipisicing elit, sed do eiusrnod the a ten-vor
+                        the inddidunt ut labore et dolore magnaa
+                        liqua Ut enim minimn.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+                        <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="second-cell">
+                    <h3>CONTACT US</h3>
+                    <div>
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>
+                            Your address <br> goes here
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <span>
+                            demo@example.com <br>
+                            demo@example.com
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            <i class="fas fa-phone-square-alt"></i>
+                        </span>
+                        <span>
+                            0123456789 <br>
+                            0123456789
+                        </span>
+                    </div>
+                </div>
+
+                <div class="third-cell">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Stuff</a>
+                        </li>
+                        <li>
+                            <a href="">Suits & Rooms</a>
+                        </li>
+                        <li>
+                            <a href="">Event</a>
+                        </li>
+                        <li>
+                            <a href="">Location</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fourth-cell">
+                    <h3>COLLECTIONS</h3>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
