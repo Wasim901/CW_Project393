@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Grid View</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -316,23 +317,80 @@ footer a:hover{
             grid-template-columns :repeat(3,1fr);
         }
     }
+#first {
+  position: relative;
+}
+
+#first::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Change the opacity as desired */
+  z-index: 1;
+}
 
 
     </style>
 </head>
 <body>
-    <nav>
-        <div class="div1">
-        <img src="https://htmldemo.net/oestin/oestin/img/bg/3.jpg" alt="err">
-        <div class="div2">
+  <div  class="nav" >
+    <div id="nav" >
 
-        </div>
-        <div class="div3">
-         <h1 >ROOM-GRID VIEW</h1>
-        <p style="font-size: 19px;">A quality room of Oestin with sea or mountain view </p>
-        </div>
+       <div  id="first">
+           <a href=""><img src="./image/logo.png" alt=""></a>
+       </div>
+       
+       <div>
+                    <div class="head">
+                        <a href="#" id="contact">contact : 0123456789</a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>           
+
+                    </div>
+   
+                    <hr>
+    
+                    <div id="dis">
+                        <ul class="uk">
+                            <li><a href="#" >HOME</a></li> 
+                            <li><a href="#" >ROOMS </a>
+                                <ul  class="dropdown">
+                                    <li><a href="#">Room List</a></li>
+                                    <li><a href="#">Room Grid</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" >ACTIVITY </a>
+                                <ul  class="dropdown">
+                                    <li><a href="#">Room List</a></li>
+                                    <li><a href="#">Room Grid</a></li>
+                                </ul>
+                            </li>
+                             
+                            <li><a href="#" >LOCATION</a></li> 
+                            <li><a href="#" >EVENT</a></li> 
+                            <li><a href="#" >TEAM</a></li>
+                            <li><a href="#" >CONTACT</a></li>
+
+                        </ul>
+                    </div>
+       </div>
+       <img src="./image/5358649 (1).png" alt="menu
+       hamburger" class="menu-hamburger">
+    </div>    
+
+
+    <div   class="event">
+    <h1>ROOM - GRID VIEW</h1>
+    <p>A quality room of Oestin with sea or mountain view</p>
     </div>
-    </nav>
+
+</div>
 
     <main >
         <br>
