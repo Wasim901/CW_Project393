@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oestin Room List View</title>
+    <a href="roomlist.css"></a>
+
+</head>
+<style>
+    body {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+
+
+
+
+
+    .nav {
+        width: 100%;
+        height: 120px;
+        /* background-color: white; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        opacity: 70%;
+        background-color: rgb(36, 36, 95);
+    }
+
+
+
+    .options {
+        margin-right: 90px;
+    }
+
+    .nav>.options {
+        width: 700px;
+        padding-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        padding-top: 60px;
+
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+        /* /* margin-right: 30px; */
+    }
+
+    .main {
+        background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+        height: 470px;
+        width: 100%;
+    }
+
+    .logo {
+        padding-left: 140px;
+    }
+
+    h1 {
+        text-align: center;
+        color: white;
+        padding-top: 100px;
+        font-size: 50px;
+    }
+
+    p {
+        text-align: center;
+        color: white;
+        /* padding-top: 150px; */
+        font-size: 25px;
+        padding-top: -40px;
+    }
+
+    h3 {
+        color: rgb(163, 118, 4);
+        padding-left: 50px;
+    }
+
+    h3>a {
+        color: white;
+        text-decoration: none;
+    }
+
+    #texts>h1 {
+        color: black;
+        font-size: 30px;
+        color: rgb(57, 51, 51);
+        margin-top: -30px;
+    }
+
+    #texts>p {
+        color: black;
+        color: rgb(57, 51, 51);
+        font-size: 20px;
+    }
+
+    #cards {
+        display: flex;
+
+        grid-template-rows: repeat(6, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    #char>h1 {
+        color: rgb(57, 51, 51);
+        font-size: 25px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #char>h2 {
+        color: rgb(57, 51, 51);
+        font-size: 25px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #char>p {
+        color: rgb(57, 51, 51);
+        font-size: 20px;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    .logo img {
+        margin-top: 70px;
+    }
+
+    #rooms {
+        width: 85%;
+        margin: auto;
+    }
+
+    #images {
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        width: 80%;
+    }
+
+    #inputs {
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    button {
+        background-color: rgb(114, 89, 26);
+        color: white;
+        height: 25px;
+
+    }
+
+    h2 {
+        padding-right: 30px;
+    }
+
+    #mail {
+        height: 20px;
+    }
+
+    #biggest {
+        background-color: rgb(46, 44, 44);
+        display: flex;
+    }
+
+    #first p {
+        text-align: left;
+        font-size: 15px;
+    }
+
+    #second>a {
+        color: white;
+        text-decoration: none;
+    }
+
+    h4 {
+        color: white;
+    }
+</style>
+
+<body>
+
+    <div class="main">
+        <div class="nav">
+            <div class="logo">
+                <div>
+                    <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                </div>
+            </div>
+
+            <div class="options">
+                <a href="" class="home">HOME</a>
+                <a href="">ROOMS</a>
+                <a href="">ACTIVITIES</a>
+                <a href="">LOCATION</a>
+                <a href="">EVENT</a>
+                <a href="">TEAM</a>
+                <a href="">CONTACT</a>
+            </div>
+        </div>
+        <h1>ROOM - LIST VIEW</h1>
+
+        <p>A quality room of Oestin with sea or mountain view</p>
+        <h3><a href="">HOME//</a>Room-List View</h3>
+    </div>
+    <div id="texts">
+        <h1>OUR ATR ROOMS</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis, eu <br>condimentum
+            massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
+    </div>
+    <div id="rooms">
+
+        <!-- <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/10.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Single Room</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/11.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Royal Suit</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/12.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Delux Suit</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/13.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Double Room</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/14.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Single Room</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div>
+        <div id="cards">
+            <div>
+                <img src="https://htmldemo.net/oestin/oestin/img/room/15.jpg" alt="">
+            </div>
+            <div id="char">
+                <h1>Deluxe Room</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
+                    <br>
+                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
+                    <br> laboris ed do eiusmod hytt
+                </p>
+                <h2>Room Facility</h2>
+                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
+                    Sweeming Pool</p>
+            </div>
+        </div> -->
+    </div>
+    <div id="images">
+        <img src="https://htmldemo.net/oestin/oestin/img/client/1.png" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/client/2.png" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/client/3.png" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/client/4.png" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/client/5.png" alt="">
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="inputs">
+        <h2>NEWSLETTER SIGN-UP</h2>
+        <input type="email" name="" id="mail" placeholder="enter your email"><button>subscribe</button>
+    </div>
+    <footer>
+        <div id="biggest">
+            <div id="first">
+                <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                <p>Lorem ipsum dolor sit amet, conse acteir <br> our adipisicing elit, sed do eiusmod the a <br> tempor
+                    the incididunt ut labore et dolore <br> magnaa liqua. Ut enim minimn.</p>
+                <div id="links">
+                    <a href="">🍹</a>
+                    <a href="">💎</a>
+                    <a href="">🌏</a>
+                    <a href="">🌃</a>
+                    <a href="">💰</a>
+                </div>
+            </div>
+            <div id="second">
+                <h4>CONTACT US</h4>
+                <a href="">📍Your address goes here </a> <br>
+                <a href="">💬demo@example.com</a> <br>
+                <a href="">📲0123456789</a>
+            </div>
+            <div id="third">
+                <h4>QUICK LINKS</h4>
+                <a href="">Home</a>
+                <a href="">Stuffs</a>
+                <a href="">Suits & Rooms</a>
+                <a href="">Event</a>
+                <a href="">Location</a>
+                <a href="">Contact</a>
+            </div>
+            <div id="fourth">
+                <h4>COLLECTIONS</h4>
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+                <img src="" alt="">
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

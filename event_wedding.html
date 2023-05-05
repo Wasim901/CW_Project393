@@ -9,6 +9,278 @@
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
          <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
         </head>
+        <style>
+          *{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family:  Calibri;
+
+}
+
+.dropdown li{
+    display: inline-block;
+    position: relative;
+
+}   
+
+
+.uk li{
+    display: inline-block;
+    position: relative;
+
+}
+
+ul li a{
+display: block;
+padding: 20px 25px ;
+color: white;
+text-decoration: none;
+text-align: center;
+font-size: 20px;
+}
+ul li ul.dropdown li{
+    display: block;
+    background-color: white;
+    color: black;
+    
+
+}
+ul li ul.dropdown li a{
+
+    color: black;
+    
+
+}
+ul li ul.dropdown{
+    width:100%;
+    
+    position: absolute;
+    z-index: 999;
+    display:none;
+    
+
+}
+ul li a:hover{
+    color: orange;
+   
+  
+   
+
+}
+ul li:hover ul.dropdown{
+    
+    display:block;
+}
+ul li ul.dropdown li{
+    display: block;
+    background-color: white;
+    color: black;
+    
+
+}
+
+
+.nav{
+    background-image:url(./image/1.jpg) ;
+    height:450px;
+   
+    background-size: cover;
+    background-position: center;
+}
+#nav {
+    display:flex;
+    position: fixed;
+    top: 0;
+ margin-top:0px ;
+   background-color:rgba(0,0, 0, 0.6);
+   width:100%
+   
+    
+}
+#first{
+    margin-right: 10%;
+}
+.head>a{
+    text-decoration: none;
+margin:20px;
+color:white 
+}
+.title>a{
+    text-decoration: none;
+margin:20px;
+color:white
+
+}
+#contact{
+    font-size: 20px;
+}
+
+@media all and (max-width:990px){
+  #dis{
+    display:none;
+  }
+    
+}
+
+.event{
+    text-align: center;
+    color: white;
+   padding-top:200px ;
+    
+}
+.up{
+    text-align: center;
+    color:rgb(10, 2, 2);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.mid{
+    display:flex;
+    padding-left: 200px ;
+    padding-right: 200px ;
+    
+ 
+}
+.mid>a{
+    color:black;
+    text-decoration: none;
+   
+    margin: auto;
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+@media only screen and (max-width: 500px) {
+    #middle{
+        grid-template-columns: repeat(1,1fr);
+       
+        
+    }
+}
+
+      
+  
+#middle{
+   
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+      width:100%;
+       gap:20px;
+       height:600px;
+       margin:auto
+        
+    }
+#middle>div:nth-child(1){
+    background-image: url("./image/1 (1).jpg");
+    grid-area: 1/1/2/3; 
+    background-size: cover;
+    background-position: center;
+}
+#middle>div:nth-child(2){
+    background-image: url("./image/2.jpg");
+    grid-area: 1/3/2/4;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.low{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.news{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    width:100%;
+    height:170px;
+    padding-top: 70px;
+   background-color:beige;
+}
+#email{
+    font-size: 30px;
+}
+#submit{
+    font-size: 30px;
+    color:maroon;
+}
+.container{
+    max-width:1170;
+    background-color: red;
+    margin:auto;
+
+
+}
+ul{
+    list-style: none;
+}
+
+.foot1 img{
+    width:50%;
+    border: 0.5px solid grey;
+}
+.foot2 img{
+    width:15%;
+    border: 0.5px solid grey;
+}
+
+.footimg{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+}
+
+footer{
+    margin-top: 70px;
+display: inline-block;
+   padding: 30px 30px 30px 30px;
+    height: 300px;
+  background-color: rgb(43, 42, 42);
+  color: white;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 50px;
+   overflow: auto;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:rgb(164, 92, 99)
+}
+
+ #pi{
+    color:white
+ }
+ @media only screen and (max-width: 800px) {
+    /* Medium Screen  */
+    footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    .footimg{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    /* Small Screen  */
+footer{
+    grid-template-columns: repeat(1,1fr);
+}
+
+    .footimg{
+        grid-template-columns :repeat(3,1fr);
+    }
+}  
+        </style>
     <body>
 
     <div  class="nav" >
@@ -54,8 +326,6 @@
                             </ul>
                         </div>
            </div>
-           <img src="./image/5358649 (1).png" alt="menu
-           hamburger" class="menu-hamburger">
         </div>    
     
     
@@ -88,10 +358,7 @@
     <div id="middle">
        <div></div>
        <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
-       <div></div>
+       
     </div>
     <div  class="low">
         <a href=""> <img src="./image/p.png" alt=""></a>
@@ -170,10 +437,8 @@
                 
                 <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt=""></a>
         
-                <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt=""></a>
-                <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/3.jpg" alt=""></a>
-                <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt=""></a>
-                <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt=""></a>
+              
+                
                 <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt=""></a>
             </div>
         </div>
