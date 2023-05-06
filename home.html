@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+
+<h2 style="text-align: center;">OUR BLOG</h2>
+<p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim exercitation ullamco laboris nisi..</p>
+<div  style="display: flex; gap: 10px;">
+<div class="container">
+
+
+  <img src="./image/ccc1.jpg" alt="Avatar" class="image">
+  <p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;">
+    Blog Post Dumy Title</p>
+  <div class="overlay">
+    <div class="text"><p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;color: black;">
+        Blog Post Dumy Title</p>
+        <p style="color: black;">Lorem ipsum dolor sit<br>
+            , amet consectetur,dgh <br>
+            adipisicing elit fhg. </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+
+
+    <img src="./image/cc2.jpg" alt="Avatar" class="image">
+    <p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;">
+      Blog Post Dumy Title</p>
+    <div class="overlay">
+      <div class="text"><p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;color: black;">
+          Blog Post Dumy Title</p>
+          <p style="color: black;">Lorem ipsum dolor sit<br>
+              , amet consectetur,dgh <br>
+              adipisicing elit fhg. </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+
+
+    <img src="./image/c3.jpg" alt="Avatar" class="image">
+    <p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;">
+      Blog Post Dumy Title</p>
+    <div class="overlay">
+      <div class="text"><p style="text-align: center;color:grey">May 08,2023<p style="text-align: center;color: black;">
+          Blog Post Dumy Title</p>
+          <p style="color: black;">Lorem ipsum dolor sit<br>
+              , amet consectetur,dgh <br>
+              adipisicing elit fhg. </p>
+      </div>
+    </div>
+  </div>
+
+  </div>
+
+</body>
+</html>
