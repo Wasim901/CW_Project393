@@ -135,7 +135,7 @@
         margin-top: 70px;
     }
 
-    #rooms {
+    #room {
         width: 85%;
         margin: auto;
     }
@@ -193,27 +193,55 @@
         text-decoration: none;
         color: white;
     }
-  #fourth img {
+
+    #fourth img {
         width: 40px;
         height: 20px;
     }
-   #biggest {
+
+    #biggest {
         display: flex;
+
     }
+
     #small {
         padding-top: 20px;
         grid-template-columns: repeat(3, 1fr);
         /* grid-template-rows: repeat(2, 1fr); */
         gap: 10px;
     }
+
     #bigin {
         width: 100%;
         gap: 100px;
         display: flex;
         justify-content: center;
         align-items: center;
+
     }
-    
+    .team h4{
+        color: black;
+        font-size: 30px;
+    }
+    .team p{
+        color: black;
+        text-align: left;
+        font-size: 20px;
+    }
+    .card{
+        display: flex;
+        padding-top: 50px;
+        
+    }
+    .team{
+        padding-left: 70px;
+    }
+#images{
+    margin-top: 100px;
+}
+#inputs{
+    margin-bottom: 50px;
+}
 </style>
 
 <body>
@@ -236,10 +264,12 @@
                 <a href="">CONTACT</a>
             </div>
         </div>
+
         <h1>ROOM - LIST VIEW</h1>
 
         <p>A quality room of Oestin with sea or mountain view</p>
         <h3><a href="">HOME//</a>Room-List View</h3>
+
     </div>
     <div id="texts">
         <h1>OUR ATR ROOMS</h1>
@@ -248,17 +278,7 @@
     </div>
 
     <div id="room">
-        <div id="one">
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <h3></h3>
-                <h5></h5>
-                <p></p>
-                <h1></h1>
-            </div>
-        </div>
+
     </div>
 
     <div id="images">
@@ -327,9 +347,9 @@
 
 
                             <img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt="">
-                        
-                      
-                        
+
+
+
                         </div>
                     </div>
                 </div>
@@ -340,36 +360,59 @@
 <script>
     let room = document.getElementById("room")
     const API = "https://645360a0e9ac46cedf23a59b.mockapi.io/rooms"
-    fetch(API)
-        .then(function (res) {
-            return res.json();
-        }).then(function (data) {
-            console.log(data)
-            display(data)
-        }).catch(function (exe) {
-            console.log(exe)
-        })
+    fetch(API).then(function (res) {
+        return res.json();
+    }).then(function (data) {
+        console.log(data);
+        DisplayData(data)
+    }).catch(function (exe) {
+        console.log(exe);
+    })
 
-    function display(data) {
+    function DisplayData(data) {
         room.innerHTML = ""
         for (let i = 0; i < data.length; i++) {
-            // console.log(data[i])
-            let rooms_2 = document.createElement("div")
+            let cardList = document.createElement("div")
+            cardList.className = "card-list"
 
-            let img1 = document.createElement("img")
-            img1.setAttribute("src", data[i].image)
-            let h3 = document.createElement("h3")
-            h3.innerText = data[i].description
-            let h5 = document.createElement("h5")
-            h5.innerText = data[i].facilities
-            let p = document.createElement("p")
-            p.innerText = data[i].price
-            let h1 = document.createElement("h1")
-            h1.innerText = data[i].type
-            rooms_2.append(img1, h1, h3, h5, p)
-            room.append(rooms_2)
+            let card = document.createElement("div")
+            card.className = "card"
+            card.setAttribute("data-id", data[i].id)
+
+            let cardImage = document.createElement("div")
+            cardImage.className = "card-img"
+
+            let img = document.createElement("img")
+            img.className = "employee-img"
+            img.src = data[i].image;
+
+            let team = document.createElement("div")
+            team.className = "team"
+
+            let type = document.createElement("h4")
+            type.className = "type"
+            type.textContent = data[i].type;
+
+            let facilities = document.createElement("p")
+            facilities.className = "facilities"
+            facilities.textContent = data[i].facilities;
+
+            let description = document.createElement("p")
+            description.className = "description"
+            description.textContent = data[i].description;
+
+            cardImage.append(img)
+            team.append(type, description, facilities)
+            card.append(cardImage, team)
+            cardList.append(card)
+
+
+            room.append(cardList)
+
         }
     }
+
+
 
 </script>
 
