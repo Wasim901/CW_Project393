@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Grid View</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
     <style>
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -334,10 +335,269 @@ footer a:hover{
 }
 
 
+
+
+
+
+body {
+		font-family: 'Roboto', sans-serif;
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	header {
+		/* margin-top: 10px; */
+		/* border: 1px solid red; */
+		text-align: center;
+		background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+		height: 470px;
+		width: 100%;
+		/* position: relative; */
+		/* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+	}
+
+	.background-overlay {
+		height: 470px;
+		width: 100%;
+		background-color: rgba(2, 1, 0, 0.61);
+	}
+
+	.head {
+		/* border: 1px solid red; */
+		display: flex;
+		align-items: center;
+		height: 115px;
+		padding-top: 5px;
+		justify-content: space-evenly;
+		line-height: 1px;
+		background-color: #01050e1a;
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+
+	.logo {
+		/* border: 1px solid red; */
+		margin-left: 120px;
+		z-index: 1;
+	}
+
+
+	.head .logo ::after {
+		background: #b5876d none repeat scroll 0 0;
+		content: "";
+		height: 141px;
+		left: -5%;
+		position: absolute;
+		top: 0;
+		-webkit-transform: skewX(-34deg);
+		transform: skewX(-34deg);
+		min-width: 35%;
+		z-index: -1;
+	}
+
+	.navigation {
+		/* border: 1px solid red; */
+		/* margin: auto; */
+		height: 90%;
+		width: 45%;
+		padding-top: 10px;
+		line-height: 1px;
+		margin-right: 20px;
+	}
+
+	.navigation .navigation-top {
+		width: 80%;
+		/* border: 1px solid red; */
+		color: white;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.navigation-top .header-contact {
+		font-size: 13px;
+	}
+
+	#contact-color {
+		color: #b5876d;
+	}
+
+
+	.social-links {
+		/* border: 1px solid red; */
+		width: 28%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.social-links i {
+		color: white;
+		/* border: 1px solid red; */
+
+	}
+
+	.social-links i:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.horizontal-line {
+		/* border: 1px solid red; */
+		width: 80%;
+		margin: auto;
+		content: " ";
+		display: block;
+		border-bottom: 0.25px solid #777777;
+
+	}
+
+	.navigation-bottom {
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
+		/* border: 1px solid red; */
+		display: flex;
+		justify-content: start;
+		gap: 30px;
+	}
+
+	.navigation-bottom a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.dropdown a {
+		font-size: 14px;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+
+	.dropdown .dropdownbtn {
+		/* display: block; */
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.dropdown>a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+		/* transition: background-color 0.5s ease-in-out; */
+	}
+
+	.dropdown:hover .submenu {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.submenu {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #ffffff;
+		padding: 15px;
+		min-width: 160px;
+		z-index: 1;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		line-height: 10px;
+		margin-top: 8px;
+		text-align: start;
+		
+	}
+
+	.submenu a {
+		display: block;
+		padding: 5px 10px;
+		color: #000;
+		text-decoration: none;
+
+	}
+
+	.submenu a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.submenu-megamenu {
+		display: flex;
+		min-width: 400px;
+		min-height: 150px;
+		line-height: 15px;
+	}
+
+
+	.container {
+		/* border: 1px solid red; */
+		margin-top: 145px;
+	}
+
+	.container .center-text h1 {
+		/* border: 1px solid red; */
+		font-size: 35px;
+		font-weight: bolder;
+		color: white;
+	}
+
+	.container .center-text {
+		/* border: 1px solid red; */
+		color: white;
+		line-height: 18px;
+		padding-bottom: 80px;
+	}
+
+	.breadcrumb-bar {
+		width: 80%;
+		/* border: 1px solid red; */
+		margin: auto;
+		width: 60%;
+
+	}
+
+	.breadcrumb {
+		list-style-type: none;
+		/* border: 1px solid red; */
+		display: flex;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb #color-text {
+		color: #b5876d;
+		/* font-size: 18px; */
+	}
+
+	.breadcrumb a {
+		text-decoration: none;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+
     </style>
 </head>
 <body>
-  <div  class="nav" >
+  <!-- <div  class="nav" >
     <div id="nav" >
 
        <div  id="first">
@@ -390,7 +650,115 @@ footer a:hover{
     <p>A quality room of Oestin with sea or mountain view</p>
     </div>
 
-</div>
+</div> -->
+
+<header>
+  <div class="background-overlay">
+      <div class="head">
+          <div class="logo">
+              <a href="index.html">
+                  <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+              </a>
+          </div>
+          <div class="navigation">
+              <div class="navigation-top">
+                  <div class="header-contact">
+                      <span id="contact-color">Contact:</span>
+                      <span>0123456789</span>
+                  </div>
+                  <div class="social-links">
+                      <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                      <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                      <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                      <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                      <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                  </div>
+              </div>
+              <div class="horizontal-line">
+                  <!-- <hr color="#b5876d"> -->
+              </div>
+              <div class="mainmenu-hidden">
+                  <nav>
+                      <div class="navigation-bottom">
+                          <div class="dropdown">
+                              <a href="index.html">HOME</a>
+                          </div>
+                          <div class="dropdown">
+                              <a class="dropdownbtn">ROOMS</a>
+                              <div class="submenu">
+                                  <a href="">ROOM LIST</a><br>
+                                  <a href="">ROOM DETAILS</a>
+                              </div>
+                          </div>
+
+                          <div class="dropdown">
+                              <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                              <div class="submenu">
+                                  <div class="submenu-megamenu">
+                                      <div class="first">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Location</a>
+                                          <a href="">Room Grid</a>
+                                          <a href="">Room List</a>
+                                          <a href="">Room Details</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+
+                                      <div class="second">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Event</a>
+                                          <a href="">Mega Menu</a>
+                                          <a href="">Contact</a>
+                                          <a href="">Team</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+
+                                      <div class="second">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Room List</a>
+                                          <a href="">Mega Menu</a>
+                                          <a href="">Room Grid</a>
+                                          <a href="">Room Details</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">LOCATION</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">EVENT</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">TEAM</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">CONTACT</a>
+                          </div>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+
+      <section>
+          <div class="container">
+              <div class="center-text">
+                  <h1>ROOM - GRID VIEW</h1>
+                  <p>A quality room of Oestin with sea or mountain view</p>
+              </div>
+              <div class="breadcrumb-bar">
+                  <div class="breadcrumb">
+                      <span><a href="index.html">Home</a>
+                          <span>//</span> <span id="color-text">Our Staff</span></span>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+</header>
+
 
     <main >
         <br>
