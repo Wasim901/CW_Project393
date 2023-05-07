@@ -1,81 +1,1131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./hotel.css">
-
-</head>
-<body>
-    <nav class="navbar">
-        <div class="navbar__container">
-          <a class="navbar__brand"   href="#">Oestin Hotel</a>
-          <div class="navbar__menu">
-            <a class="navbar__link" href="#">HOME</a>
-            <a class="navbar__link" href="#">ROOMS</a>
-            <a class="navbar__link" href="#">ACTIVITIES</a>
-            <a class="navbar__link" href="#">LOCATION</a>
-            <a class="navbar__link" href="#">EVENT</a>
-            <a class="navbar__link" href="#">TEAM</a>
-            <a class="navbar__link" href="#">CONTACT</a>
-          </div>
-        </div>
-      </nav>
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./index.css" type="text/css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
 
 
-      <footer class="footer">
-        <div class="footer__top">
-          <div class="footer__item">
-            <h3 class="footer__title">Oestin</h3>
-            <p class="footer__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, purus sed pulvinar pellentesque, elit turpis venenatis ex, eu tincidunt orci nulla ut lorem.</p>
-            <div class="footer__social-icons">
-              <a href="#" class="footer__social-icon"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="footer__social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="footer__social-icon"><i class="fab fa-instagram"></i></a>
-            </div>
-          </div>
-          <div class="footer__item">
-            <h3 class="footer__title">CONTACT US</h3>
-            <ul class="footer__list">
-              <li class="footer__list-item">Your address goes here</li>
-              <li class="footer__list-item">Oestin@gmail.com</li>
-              <li class="footer__list-item">6396230257</li>
-            </ul>
-          </div>
-          <div class="footer__item">
-            <h3 class="footer__title">QUICK LINKS</h3>
-            <ul class="footer__list">
-              <li class="footer__list-item"><a href="#">Home</a></li>
-              <li class="footer__list-item"><a href="#">Rooms</a></li>
-              <li class="footer__list-item"><a href="#">Activities</a></li>
-              <li class="footer__list-item"><a href="#">Location</a></li>
-              <li class="footer__list-item"><a href="#">Event</a></li>
-              <li class="footer__list-item"><a href="#">Team</a></li>
-              <li class="footer__list-item"><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="footer__item">
-            <h3 class="footer__title">COLLECTIONS</h3>
-            <div class="footer__collection">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-              <img src="https://via.placeholder.com/80x80.png" alt="bedroom image" class="footer__collection-img">
-            </div>
-          </div>
-        </div>
-        <div class="footer__bottom">
-          <p class="footer__text">© 2023 Oestin Hotel. All rights reserved.</p>
-        </div>
-      </footer>
-      
-      
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        header {
+            /* margin-top: 10px; */
+            /* border: 1px solid red; */
+            text-align: center;
+            background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+            height: 470px;
+            width: 100%;
+            /* position: relative; */
+            /* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+        }
+
+        .background-overlay {
+            height: 470px;
+            width: 100%;
+            background-color: rgba(2, 1, 0, 0.61);
+        }
+
+        .head {
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            height: 115px;
+            padding-top: 5px;
+            justify-content: space-evenly;
+            line-height: 1px;
+            background-color: #01050e1a;
+            position: relative;
+            /* overflow: hidden; */
+        }
+
+
+        .logo {
+            /* border: 1px solid red; */
+            margin-left: 120px;
+            z-index: 1;
+        }
+
+
+        .head .logo ::after {
+            background: #b5876d none repeat scroll 0 0;
+            content: "";
+            height: 141px;
+            left: -5%;
+            position: absolute;
+            top: 0;
+            -webkit-transform: skewX(-34deg);
+            transform: skewX(-34deg);
+            min-width: 35%;
+            z-index: -1;
+        }
+
+        .navigation {
+            /* border: 1px solid red; */
+            /* margin: auto; */
+            height: 90%;
+            width: 45%;
+            padding-top: 10px;
+            line-height: 1px;
+            margin-right: 20px;
+        }
+
+        .navigation .navigation-top {
+            width: 80%;
+            /* border: 1px solid red; */
+            color: white;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .navigation-top .header-contact {
+            font-size: 13px;
+        }
+
+        #contact-color {
+            color: #b5876d;
+        }
+
+
+        .social-links {
+            /* border: 1px solid red; */
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links i {
+            color: white;
+            /* border: 1px solid red; */
+
+        }
+
+        .social-links i:hover {
+            color: #b5876d;
+            transition: color 0.5s ease;
+        }
+
+        .horizontal-line {
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+            content: " ";
+            display: block;
+            border-bottom: 0.25px solid #777777;
+
+        }
+
+        .navigation-bottom {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+        }
+
+        .navigation-bottom a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown a {
+            font-size: 14px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .dropdown .dropdownbtn {
+            /* display: block; */
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .dropdown>a:hover {
+            color: #b5876d;
+            transition: color 0.5s ease;
+            /* transition: background-color 0.5s ease-in-out; */
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .submenu {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            padding: 15px;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            line-height: 10px;
+            margin-top: 8px;
+            text-align: start;
+            
+        }
+
+        .submenu a {
+            display: block;
+            padding: 5px 10px;
+            color: #000;
+            text-decoration: none;
+
+        }
+
+        .submenu a:hover {
+            color: #b5876d;
+            transition: color 0.5s ease;
+        }
+
+        .submenu-megamenu {
+            display: flex;
+            min-width: 400px;
+            min-height: 150px;
+            line-height: 15px;
+        }
+
+
+        .container {
+            /* border: 1px solid red; */
+            margin-top: 145px;
+        }
+
+        .container .center-text h1 {
+            /* border: 1px solid red; */
+            font-size: 35px;
+            font-weight: bolder;
+            color: white;
+        }
+
+        .container .center-text {
+            /* border: 1px solid red; */
+            color: white;
+            line-height: 18px;
+            padding-bottom: 80px;
+        }
+
+        .breadcrumb-bar {
+            width: 80%;
+            /* border: 1px solid red; */
+            margin: auto;
+            width: 60%;
+
+        }
+
+        .breadcrumb {
+            list-style-type: none;
+            /* border: 1px solid red; */
+            display: flex;
+            color: white;
+            font-size: 18px;
+        }
+
+        .breadcrumb #color-text {
+            color: #b5876d;
+            /* font-size: 18px; */
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+
+        .breadcrumb a:hover {
+            color: #b5876d;
+            transition: color 0.5s ease;
+        }
+
+        .middle {
+            /* border: 1px solid red; */
+            margin-top: 90px;
+
+        }
+
+        .middle .our-special-staff {
+            /* border: 1px solid red; */
+            text-align: center;
+            margin: auto;
+            width: fit-content;
+
+        }
+
+        .middle .our-special-staff h2 {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 17px;
+            text-transform: uppercase;
+            /* padding-bottom: 8px; */
+            color: #444444;
+        }
+
+        .middle .our-special-staff p {
+            font-size: 15px;
+            line-height: 24px;
+            /* border: 1px solid red; */
+            width: 60%;
+            margin: auto;
+            color: #444444;
+
+        }
+
+        .staff_data {
+            /* border: 1px solid red; */
+            width: 65%;
+            padding-top: 50px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            row-gap: 30px;
+        }
+
+        .staff_data .card_list {
+            margin-top: 50px;
+            /* border: 1px solid red; */
+            /* width: fit-content; */
+            margin: 10px;
+        }
+
+        .staff_data .card_list .card{
+            /* border: 1px solid red;  */
+            position: relative;
+            width: 100%;
+            margin: auto;
+        }
+
+        .card_list .card .card_img {
+            /* border: 1px solid red;  */
+            margin: auto;
+            /* max-width: 400px; */
+            width: fit-content; 
+            position: relative;
+        }
+
+        .card .employee_img {
+            border: 1px solid red;
+            /* max-width: 100%; */
+            width: 100%;
+            display: block;
+            margin: auto;
+        }
+
+
+        .card .teamHover{
+            /* border: 1px solid red; */
+            position: absolute;
+            margin: auto;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: all 0.4s ease 0s;
+            /* bottom: -100%; */
+        }
+
+
+        .teamHover h4{
+            color: #ffffff;
+            margin-bottom: 2px;
+            display: block;
+            font-size: 28px !important;
+            line-height: 25px;
+            transform: translate3d(0px, 200%, 0px);
+            transition: transform 0.25s ease 0s;
+        }
+
+        .teamHover span{
+            color: #ffffff;
+            /* font-family: "raleway"; */
+            display: block;
+            line-height: 40px;
+            font-size: 16px !important;
+            margin-bottom: 14px;
+            font-weight: 300;
+            transform: translate3d(0px, 200%, 0px);
+            transition: transform 0.25s ease 0s;
+        }
+
+        .teamHover p{
+            width: 80%;
+            color: #ffffff;
+            display: block;
+            margin-bottom: 12px;
+            font-size: 16px !important;
+            font-weight: 300;
+            transform: translate3d(0px, 200%, 0px);
+            transition: transform 0.25s ease 0s;
+        }
+
+        .card:hover .teamHover{
+            height: 47%;
+        }
+
+
+        .teamHover .text{
+            color: white;
+            font-size: 18px;
+            position: relative;
+            top: 0;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1;
+        }
+
+
+        .client {
+            /* border: 1px solid red; */
+            margin-top: 100px;
+            margin-bottom: 80px;
+        }
+
+        .client .client-image {
+            /* border: 1px solid red; */
+            width:90%;
+            margin: auto;
+        }
+
+        .client .client-image .image {
+            /* border: 1px solid red; */
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .client .client-image .image img {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+
+        .newsletter {
+            border: 1px solid red;
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+        }
+
+        .newsletter .newsletter-container {
+            border: 1px solid red;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-area {
+            /* border: 1px solid red; */
+            height: 400px;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            background-color: #212529;
+            color: white;
+        }
+
+        .footer-container{
+            border: 1px solid red;
+            width: 65%;
+            margin: auto;
+            height: 350px;
+        }
+
+        .row{
+            /* border: 1px solid red; */
+            display: flex;
+            /* grid-template-columns: repeat(4, 1fr); */
+            gap: 20px;
+            height: 350px;
+        }
+
+        .first-cell{
+            /* border: 1px solid red; */
+            padding: 20px;
+            padding-top: 40px;
+            width: 25%;
+            margin-right: 40px;
+            line-height: 22px;
+
+        }
+
+        .first-cell img {
+            width: 44%;
+        }
+
+        .first-cell p{
+            /* border: 1px solid red; */
+            margin-top: 25px;
+            font-weight: 200;
+            font-size: 15px;
+            width: 90%;
+        }
+
+
+        .first-cell .footer-social {
+            margin-top: 40px;
+            /* border: 1px solid red; */
+            display: flex;
+            width: 70%;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        .first-cell .footer-social i{
+            border: 1px solid #c0bcb7;
+            font-size: 15px;
+            padding: 8px;
+            color: #c0bcb7;
+        }
+
+        .first-cell .footer-social i:hover{
+            background-color: #b5876d;
+            color: #e9e5e0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            
+
+        }
+
+
+        .second-cell{
+            border: 1px solid red;
+            padding: 10px;
+            line-height: 22px;
+            margin-right: 30px;
+        }
+
+        .second-cell h3{
+            border: 1px solid red;
+            margin-bottom: 30px !important;
+            margin-top: 25px;
+            line-height: 30px;
+        }
+
+        .second-cell .address {
+            border: 1px solid red;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .address i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+            
+        }
+
+        .second-cell .email {
+            border: 1px solid red;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 15px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .email i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 8px;
+            transition: color 0.5s ease;
+
+        }
+
+        .second-cell i:hover{
+            background-color: #e9e5e0;
+        }
+
+        .second-cell a:hover{
+            transition: color 0.5s ease;
+        }
+
+        .second-cell .phone {
+            border: 1px solid red;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 15px !important;
+            font-weight: 300 !important;
+        }    
+
+        .second-cell .phone i{
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+
+        }
+
+        .third-cell{
+            border: 1px solid red;
+            /* padding: 20px; */
+            
+        }
+
+        .third-cell h3{
+            border: 1px solid red;
+
+        }
+
+        .third-cell li {
+            border: 1px solid red;
+            list-style-type: none;
+        }
+
+        .third-cell a{
+            text-decoration: none;
+            color: white;
+            text-align: start;
+            border: 1px solid red;
+
+        }
+
+        .fourth-cell{
+            border: 1px solid red;
+            padding: 20px;
+
+        } @media only screen and (max-width: 600px) {
+        header {
+            height: 300px;
+        }
+
+        .background-overlay {
+            height: 300px;
+        }
+
+        .head {
+            height: 80px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .logo {
+            margin-left: 10px;
+        }
+
+        .navigation {
+            display: none;
+        }
+
+        .container {
+            margin-top: 80px;
+        }
+
+        .container .center-text h1 {
+            font-size: 28px;
+        }
+    }
+
+    /* Styles for screens between 600px and 1024px */
+    @media only screen and (min-width: 600px) and (max-width: 1024px) {
+        .navigation {
+            width: 60%;
+        }
+    }
+
+    /* Styles for screens larger than 1024px */
+    @media only screen and (min-width: 1024px) {
+        .navigation {
+            width: 45%;
+        }
+    }
     
-</body>
-</html>
+    /* Other existing styles */
+    body {
+        font-family: 'Roboto', sans-serif;
+        padding: 0px;
+        margin: 0px;
+    }
 
-<script src="./hotel.js"></script>  
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+        background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+        height: 470px;
+        width: 100%;
+    }
+
+    .background-overlay {
+        height: 470px;
+        width: 100%;
+        background-color: rgba(2, 1, 0, 0.61);
+    }
+
+    .head {
+        display: flex;
+        align-items: center;
+        height: 115px;
+        padding-top: 5px;
+        justify-content: space-evenly;
+        line-height: 1px;
+        background-color: #01050e1a;
+        position: relative;
+    }
+
+    .logo {
+        margin-left: 120px;
+        z-index: 1;
+    }
+
+    .head .logo ::after {
+        background: #b5876d none repeat scroll 0 0;
+        content: "";
+        height: 141px;
+        left: -5%;
+        position: absolute;
+        top: 0;
+        -webkit-transform: skewX(-34deg);
+        transform: skewX(-34deg);
+        min-width: 35%;
+        z-index: -1;
+    }
+
+    .navigation {
+        height: 90%;
+        width: 45%;
+        padding-top: 10px;
+        line-height: 1px;
+        margin-right: 20px;
+    }
+
+    .navigation .navigation-top {
+        width: 80%;
+        color: white;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .navigation-top .header-contact {
+        font-size: 13px;
+    }
+
+    #contact-color {
+        color: #b5876d;
+    }
+
+    .social-links {
+        width: 28%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-links i {
+        color: white;
+    }
+
+    .social-links i:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="background-overlay">
+            <div class="head">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <div class="navigation-top">
+                        <div class="header-contact">
+                            <span id="contact-color">Contact:</span>
+                            <span>0123456789</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                            <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="horizontal-line">
+                        <!-- <hr color="#b5876d"> -->
+                    </div>
+                    <div class="mainmenu-hidden">
+                        <nav>
+                            <div class="navigation-bottom">
+                                <div class="dropdown">
+                                    <a href="index.html">HOME</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdownbtn">ROOMS</a>
+                                    <div class="submenu">
+                                        <a href="">ROOM LIST</a><br>
+                                        <a href="">ROOM DETAILS</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                                    <div class="submenu">
+                                        <div class="submenu-megamenu">
+                                            <div class="first">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Location</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Event</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Contact</a>
+                                                <a href="">Team</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">LOCATION</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">EVENT</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">TEAM</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">CONTACT</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div class="container">
+                    <div class="center-text">
+                        <h1>OUR STAFF</h1>
+                        <p>A quality room of Oestin with sea or mountain view</p>
+                    </div>
+                    <div class="breadcrumb-bar">
+                        <div class="breadcrumb">
+                            <span><a href="index.html">Home</a>
+                                <span>//</span> <span id="color-text">Our Staff</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+
+
+    <section>
+        <div class="middle">
+            <div class="our-special-staff">
+                <h2>OUR SPECIAL STAFF</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis,
+                    eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
+            </div>
+            <div class="staff_data">
+                <!-- append the data here -->
+            </div>
+            <div class="pagination-button">
+                <!-- buttons here -->
+            </div>
+        </div>
+    </section>
+    <div class="client">
+        <div class="client-image">
+            <div class="image">
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/1.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/2.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/3.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/4.png"></a>
+                </div>
+                <!-- <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h3>NEWSLETTER SIGN-UP</h3>
+            <div class="newsletter-imput">
+                <input type="text" placeholder="Enter your E-mail">
+                <input type="button" value="SUBSCRIBE">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
+        <div class="footer-container">
+            <div class="row">
+                <div class="first-cell">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="./logo.webp">
+                        </a>
+                    </div>
+                    <p>Lorem ipsumdolor sit amet, conse acteir our
+                        adipisicing elit, sed do eiusrnod the a ten-vor
+                        the inddidunt ut labore et dolore magnaa
+                        liqua Ut enim minimn.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+                        <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="second-cell">
+                    <h3>CONTACT US</h3>
+                    <div class="address">
+                        <span>
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>
+                            Your address <br> goes here
+                        </span>
+                    </div>
+                    <div class="email">
+                        <span>
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <span>
+                            demo@example.com <br>
+                            demo@example.com
+                        </span>
+                    </div>
+                    <div class="phone">
+                        <span>
+                            <i class="fas fa-phone-square-alt"></i>
+                        </span>
+                        <span>
+                            0123456789 <br>
+                            0123456789
+                        </span>
+                    </div>
+                </div>
+
+                <div class="third-cell">
+                    <h3>QUICK LINKS</h3>
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Stuff</a>
+                        </li>
+                        <li>
+                            <a href="">Suits & Rooms</a>
+                        </li>
+                        <li>
+                            <a href="">Event</a>
+                        </li>
+                        <li>
+                            <a href="">Location</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="fourth-cell">
+                    <h3>COLLECTIONS</h3>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    let staff = document.querySelector(".staff_data")
+    let page = document.querySelector(".pagination-button")
+    fetchData(1)
+    
+    async function fetchData(num) {
+        console.log(num)
+        try {
+            let res = await fetch(`https://645360a0e9ac46cedf23a59b.mockapi.io/staff`)
+            // let total = res.headers.get("X-Total-Count");
+            // let page = Math.ceil(total / 10);
+            // console.log(res.headers)
+            // paginationWrapper.innerHTML = "";
+
+            // for (let i = 1; i <= page; i++) {
+            // paginationWrapper.append(createButton(i));
+            // }
+            let data = await res.json()
+            console.log(data)
+            DisplayData(data)
+        }
+        catch (err) {
+            console.log(err)
+        }
+
+    //    fetch("https://645360a0e9ac46cedf23a59b.mockapi.io/staff")
+    //    .then((res)=>{
+    //         return res.json()
+    //    })
+    //    .then((data)=>{
+    //         console.log(data)
+    //         DisplayData(data)
+    //    })     
+    //    .catch((err)=>{
+    //     console.log(err)
+    //    })
+
+    }
+
+
+    
+        function createButton(id) {
+        let button = document.createElement("button");
+        button.className = "pagination-button"
+        button.setAttribute("data-page-number", id)
+        button.textContent = id
+        button.addEventListener("click", ()=>{
+            fetchData(id);
+        })
+        return button;
+        }
+
+
+
+    function DisplayData(data) {
+        staff.innerHTML = ""
+        for(let i=0;i<data.length;i++){
+        let cardList = document.createElement("div")
+        cardList.className = "card_list"
+
+        let card = document.createElement("div")
+        card.className = "card"
+        card.setAttribute("data-id", data[i].id)
+
+        let cardImage = document.createElement("div")
+        cardImage.className = "card_img"
+
+        let img = document.createElement("img")
+        img.className = "employee_img"
+        img.src = data[i].image;
+
+        let teamHover = document.createElement("div")
+        teamHover.className = "teamHover"
+
+        let name = document.createElement("h4")
+        name.className = "text"
+        name.textContent = data[i].name;
+
+        let designation = document.createElement("span")
+        designation.className = "text"
+        designation.textContent = `(${data[i].designation})`;
+
+        let description = document.createElement("p")
+        description.className = "text"
+        description.textContent = data[i].description;
+
+        cardImage.append(img)
+
+        teamHover.append(name, designation, description)
+
+        card.append(cardImage, teamHover)
+        // data.forEach(item => {
+        cardList.append(card)
+        
+            
+            // })
+        staff.append(cardList)
+
+        }
+
+    }
+    // card()
+
+    window.addEventListener("load", function(){
+        fetchData(1)
+    })
+
+
+
+</script>
+
+</html>
