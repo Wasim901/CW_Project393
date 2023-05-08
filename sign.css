@@ -125,6 +125,8 @@ form{
 a.facebook{
     color: #fff;
     background-color: #4267b2;
+}a.facebook:hover{
+    background-color: #1c4596;
 }
 a.facebook .facebook-icon{
     height: 28px;
@@ -143,6 +145,7 @@ img.google-img{
     top: 50%;
     left: 15px;
     transform: translateY(-50%);
+    cursor: pointer;
 }
 img.google-img{
     height: 20px;
@@ -206,6 +209,7 @@ a.google span{
     color: green;
 
 }
+  
   
   
   

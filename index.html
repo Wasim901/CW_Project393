@@ -1,0 +1,1115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            padding: 0px;
+            margin: 0px;
+        }
+
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 20px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #b5876d;
+            color: white;
+            cursor: pointer;
+            padding: 12px;
+            /* border-radius: 4px; */
+        }
+
+
+        #myBtn:before {
+            content: "\f106";
+        }
+
+
+        #myBtn {
+            display: inline-block;
+            font: normal normal normal 14px/1 FontAwesome;
+            font-size: 18px;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        #myBtn:hover {
+            background-color: #263238;
+            transition: 0.5s ease;
+        }
+
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+
+        header {
+            /* border: 1px solid red; */
+            text-align: center;
+            height: 470px;
+            width: 100%;
+        }
+
+
+        .background-overlay {
+            /* height: 470px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* height: 100%; */
+            width: 100%;
+            background-color: rgba(2, 1, 0, 0.205);
+            z-index: 1;
+        }
+
+
+        .head {
+            /* border: 1px solid red; */
+            display: flex;
+            align-items: center;
+            height: 115px;
+            padding-top: 5px;
+            justify-content: space-evenly;
+            line-height: 1px;
+            background-color: #01050e1a;
+            position: relative;
+            /* overflow: hidden; */
+
+        }
+
+
+        .logo {
+            /* border: 1px solid red; */
+            margin-left: 120px;
+            z-index: 1;
+        }
+
+
+        .head .logo ::after {
+            background: #b5876d none repeat scroll 0 0;
+            content: "";
+            height: 141px;
+            left: -5%;
+            position: absolute;
+            top: 0;
+            -webkit-transform: skewX(-34deg);
+            transform: skewX(-34deg);
+            min-width: 35%;
+            z-index: -1;
+        }
+
+        .navigation {
+            /* border: 1px solid red; */
+            /* margin: auto; */
+            height: 90%;
+            width: 45%;
+            padding-top: 10px;
+            line-height: 1px;
+            margin-right: 20px;
+            z-index: 1;
+        }
+
+        .navigation .navigation-top {
+            width: 80%;
+            /* border: 1px solid red; */
+            color: white;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .navigation-top .header-contact {
+            font-size: 13px;
+        }
+
+        #contact-color {
+            color: #b5876d;
+        }
+
+
+        .social-links {
+            /* border: 1px solid red; */
+            width: 28%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .social-links i {
+            color: white;
+            /* border: 1px solid red; */
+
+        }
+
+        .social-links i:hover {
+            color: #b5876d;
+            /* transition: opacity 1.5s ease, visibility 1.5s ease; */
+            transition: 0.5s ease;
+
+        }
+
+        .horizontal-line {
+            /* border: 1px solid red; */
+            width: 80%;
+            margin: auto;
+            content: " ";
+            display: block;
+            border-bottom: 0.25px solid #777777;
+
+        }
+
+        .navigation-bottom {
+            width: 80%;
+            margin: auto;
+            margin-top: 30px;
+            /* border: 1px solid red; */
+            display: flex;
+            justify-content: start;
+            gap: 30px;
+        }
+
+        .navigation-bottom a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown a {
+            font-size: 14px;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+
+        .dropdown .dropdownbtn {
+            /* display: block; */
+            position: relative;
+            z-index: 1;
+        }
+
+
+        .dropdown>a:hover {
+            color: #b5876d;
+            transition: color 0.5s ease;
+            /* transition: background-color 0.5s ease-in-out; */
+        }
+
+        .dropdown:hover .submenu {
+            display: block;
+            opacity: 1;
+            visibility: visible;
+            transition: 0.5 ease;
+        }
+
+        .submenu {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #ffffff;
+            padding: 15px;
+            min-width: 160px;
+            z-index: 1;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            line-height: 10px;
+            margin-top: 8px;
+            text-align: start;
+            /* border: 1px solid red; */
+
+        }
+
+        .submenu a {
+            display: block;
+            padding: 5px 10px;
+            color: #000;
+            text-decoration: none;
+            transition: 0.5s ease;
+
+        }
+
+        .submenu a:hover {
+            background-color: #b5876d;
+            color: white;
+
+        }
+
+        .submenu-megamenu {
+            /* border: 1px solid red; */
+            display: flex;
+            min-width: 400px;
+            min-height: 170px;
+            line-height: 15px;
+            font-size: 10px !important;
+            font-weight: 200;
+            line-height: 20px;
+        }
+
+
+
+
+        /* third window slideshow div starts here  */
+        #slideshow4_1 {
+            /* border: 5px solid red; */
+            width: 70%;
+            display: flex;
+            margin: 20px auto;
+            justify-content: center;
+            text-align: center;
+            line-height: 5px;
+            transition: opacity 1s ease-in-out;
+        }
+
+        #slideshow4_1 img {
+            width: 100%;
+            /* margin: auto; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #000;
+        }
+
+
+
+        .text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(50%);
+        }
+
+        .text h1{
+            font-size: 50px;
+            z-index: 1;
+            color: #ff0000;
+        }
+
+
+        #slideshow4_1:hover .hover-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+        #rightArrow2 {
+            background-color: rgba(0, 0, 0, 0.377);
+            border: none;
+            position: absolute;
+            right: 0;
+            color: grey;
+            z-index: 2;
+            cursor: pointer;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        #leftArrow2 {
+            background-color: rgba(0, 0, 0, 0.377);
+            border: none;
+            position: absolute;
+            left: 0;
+            color: grey;
+            z-index: 2;
+            cursor: pointer;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+
+        }
+
+        #leftArrow2:hover,
+        #rightArrow2:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            #leftArrow2,
+            #rightArrow2,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+
+
+
+        .client {
+            /* border: 1px solid red; */
+            margin-top: 1000px;
+            margin-bottom: 80px;
+        }
+
+        .client .client-image {
+            /* border: 1px solid red; */
+            width: 90%;
+            margin: auto;
+        }
+
+        .client .client-image .image {
+            /* border: 1px solid red; */
+            width: fit-content;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .client .client-image .image img {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+
+
+        .newsletter {
+            /* border: 1px solid red; */
+            padding-top: 50px;
+            padding-bottom: 50px;
+            background-color: #f8f9fa;
+        }
+
+        .newsletter .newsletter-container {
+            /* border: 1px solid red; */
+            width: 45%;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+
+        .newsletter .newsletter-container h3 {
+            /* border: 1px solid red; */
+            font-size: 27px;
+            word-spacing: 5px;
+            letter-spacing: 2px;
+        }
+
+        .newsletter-container .newsletter-input {
+            display: flex;
+            /* border: 1px solid red; */
+            width: 50%;
+        }
+
+
+        .newsletter-input #search {
+            /* border: 1px solid red; */
+            width: 60%;
+            padding: 11px;
+            background-color: #f8f9fa;
+            border: 1px solid rgb(184, 182, 182);
+            font-family: 'Roboto', sans-serif;
+            font-size: 15px;
+        }
+
+
+        .newsletter-input #button {
+            /* border: 1px solid red; */
+            color: #FFF;
+            border: none;
+            border-radius: 0px;
+            padding: 12px;
+            display: inline-block;
+            /* font-family: "Lucida Console", Monaco, monospace; */
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            cursor: pointer;
+            box-shadow: inset 0 0 0 0 #080808;
+            -webkit-transition: ease-out 0.8s;
+            -moz-transition: ease-out 0.8s;
+            transition: ease-out 0.8s;
+            background-color: #b5876d;
+        }
+
+
+        .newsletter-input #button:hover {
+            /* bottom: 0; */
+            box-shadow: inset 0 100px 0 0 #0f0f0f;
+        }
+
+
+        .footer-area {
+            /* border: 1px solid red; */
+            height: 400px;
+            padding-top: 100px;
+            padding-bottom: 20px;
+            background-color: #212529;
+            color: white;
+        }
+
+        .footer-container {
+            /* border: 1px solid red; */
+            width: 65%;
+            margin: auto;
+        }
+
+        .row {
+            /* border: 1px solid red; */
+            display: flex;
+            /* grid-template-columns: repeat(4, 1fr); */
+            gap: 20px;
+        }
+
+        .first-cell {
+            /* border: 1px solid red; */
+            margin: auto;
+            padding: 20px;
+            padding-top: 40px;
+            width: 25%;
+            margin-right: 50px;
+            line-height: 22px;
+            margin: auto;
+
+        }
+
+        .first-cell img {
+            width: 44%;
+        }
+
+        .first-cell p {
+            /* border: 1px solid red; */
+            margin-top: 25px;
+            font-weight: 200;
+            font-size: 15px;
+            width: 90%;
+        }
+
+
+        .first-cell .footer-social {
+            margin-top: 40px;
+            /* border: 1px solid red; */
+            display: flex;
+            width: 70%;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        .first-cell .footer-social i {
+            border: 1px solid #c0bcb7;
+            font-size: 15px;
+            padding: 8px;
+            color: #c0bcb7;
+            transition: 1.2s;
+
+        }
+
+        .first-cell .footer-social i:hover {
+            background-color: #b5876d;
+            color: #e9e5e0;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+
+        }
+
+        .second-cell {
+            /* border: 1px solid red; */
+            padding: 10px;
+            line-height: 22px;
+            margin-right: 90px;
+            margin: auto;
+
+        }
+
+        .second-cell h3 {
+            /* border: 1px solid red; */
+            margin-bottom: 30px !important;
+            margin-top: 15px;
+            line-height: 40px;
+            /* margin-bottom: 50px; */
+        }
+
+        .second-cell .address {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 14px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .address i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+            transition: 0.5s;
+
+        }
+
+        .second-cell .email {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 15px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .email i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 8px;
+            transition: 0.5s;
+        }
+
+        .second-cell i:hover {
+            background-color: #e9e5e0;
+            transition-delay: color 0.5s ease;
+        }
+
+        .second-cell .phone {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 15px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .phone i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+            transition: 0.5s;
+
+        }
+
+        .third-cell {
+            /* border: 1px solid rgb(0, 255, 234); */
+            margin-right: 30px;
+            margin: auto;
+
+        }
+
+        .third-cell h3 {
+            padding-top: 12px;
+            /* border: 1px solid rgb(0, 217, 255); */
+            margin-bottom: 50px;
+
+        }
+
+        .third_cell_data p {
+            /* border: 1px solid rgb(0, 255, 200); */
+            line-height: 14px;
+            font-weight: 200;
+            font-size: 15px;
+        }
+
+
+        .third_cell_data a:hover {
+            /* border: 1px solid rgb(0, 255, 200); */
+            color: #b5876d;
+            transition: color 0.5s ease;
+        }
+
+        .third-cell a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .fourth-cell {
+            /* border: 1px solid red; */
+            /* padding: 5px; */
+            margin: auto;
+
+        }
+
+        .fourth-cell h3 {
+            margin-bottom: 40px;
+        }
+
+        .fourth-cell .link_img {
+            /* border: 1px solid red; */
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 5px;
+            column-gap: 10px;
+        }
+
+        .bottom {
+            /* border: 1px solid red; */
+            margin-top: 70px;
+            background-color: #000;
+            height: 65px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .pagination-button {
+            /* border: 2px red solid; */
+            width: 5%;
+            display: flex;
+            margin: 20px auto;
+            align-self: center;
+            justify-content: space-between;
+        }
+
+        .pagination-button a {
+            background-color: transparent;
+            padding: 20px;
+            text-decoration: none;
+            color: rgb(97, 93, 93);
+            border-radius: 5px;
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .pagination-button a:hover {
+            color: #b5876d;
+            transition: 0.5s ease;
+
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"></button>
+    <header>
+        <div class="background-overlay">
+            <div class="head">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="navigation">
+                    <div class="navigation-top">
+                        <div class="header-contact">
+                            <span id="contact-color">Contact:</span>
+                            <span>0123456789</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                            <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="horizontal-line">
+                        <!-- <hr color="#b5876d"> -->
+                    </div>
+                    <div class="mainmenu-hidden">
+                        <nav>
+                            <div class="navigation-bottom">
+                                <div class="dropdown">
+                                    <a href="index.html">HOME</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdownbtn">ROOMS</a>
+                                    <div class="submenu">
+                                        <a href="">ROOM LIST</a><br>
+                                        <a href="">ROOM DETAILS</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                                    <div class="submenu">
+                                        <div class="submenu-megamenu">
+                                            <div class="first">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Location</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Event</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Contact</a>
+                                                <a href="">Team</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">LOCATION</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">EVENT</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">TEAM</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">CONTACT</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slideshow-container">
+            <button id="leftArrow2"> &lt; </button>
+            <button id="rightArrow2">&gt;</button>
+
+            <div id="slideshow4_1" class="overlay-content">
+                <div class="text">
+                    <h1>welcome to Oestin</h1>
+                </div>
+                <!-- append your first window slidshow here  -->
+            </div>
+        </div>
+        
+    </header>
+    <div class="row">
+        <div class="col-12">
+            <form action="#" method="post" class="search-form">
+                <div class="form-container fix">
+                    <div class="box-select">
+                        <div class="select date">
+                            <input type="date" name="arrive" />
+                        </div>
+                        <div class="select date">
+                            <input type="date" name="departure" />
+                        </div>
+                        <div class="select arrow">
+                            <select name="adults">
+                                <option>ADULTS</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                        <div class="select arrow">
+                            <select name="children">
+                                <option>CHILDREN</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="search-default-btn"> Check Availability</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </section>
+    <div class="client">
+        <div class="client-image">
+            <div class="image">
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/1.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/2.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/3.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/4.png"></a>
+                </div>
+                <div>
+                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="newsletter">
+        <div class="newsletter-container">
+            <h3>NEWSLETTER SIGN-UP</h3>
+            <div class="newsletter-input">
+                <input type="text" placeholder="Enter your E-mail" id="search">
+                <input type="button" value="SUBSCRIBE" id="button">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-area">
+        <div class="footer-container">
+            <div class="row">
+                <div class="first-cell">
+                    <div class="footer-logo">
+                        <a href="index.html">
+                            <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png">
+                        </a>
+                    </div>
+                    <p>Lorem ipsumdolor sit amet, conse acteir our
+                        adipisicing elit, sed do eiusrnod the a ten-vor
+                        the inddidunt ut labore et dolore magnaa
+                        liqua Ut enim minimn.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                        <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                        <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+                        <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+
+                <div class="second-cell">
+                    <h3>CONTACT US</h3>
+                    <div class="address">
+                        <span class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </span>
+                        <span>
+                            Your address <br> goes here
+                        </span>
+                    </div>
+                    <div class="email">
+                        <span class="icon">
+                            <i class="fa fa-envelope-o"></i>
+                        </span>
+                        <span>
+                            demo@example.com <br>
+                            demo@example.com
+                        </span>
+                    </div>
+                    <div class="phone">
+                        <span class="icon">
+                            <i class="fas fa-phone-square-alt"></i>
+                        </span>
+                        <span>
+                            0123456789 <br>
+                            0123456789
+                        </span>
+                    </div>
+                </div>
+
+                <div class="third-cell">
+                    <h3>QUICK LINKS</h3>
+                    <div class="third_cell_data">
+                        <p><a href="">Home</a></p>
+                        <p><a href="">Stuff</a></p>
+                        <p><a href="">Suits & Rooms</a></p>
+                        <p><a href="">Event</a></p>
+                        <p><a href="">Location</a></p>
+                        <p><a href="">Contact</a></p>
+                    </div>
+                </div>
+
+                <div class="fourth-cell">
+                    <h3>COLLECTIONS</h3>
+                    <div class="link_img">
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt=""></a>
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt=""></a>
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/3.jpg" alt=""></a>
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt=""></a>
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt=""></a>
+                        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <p>© 2021 Oestin</p>
+        </div>
+    </footer>
+
+
+
+</body>
+<script>
+
+    // third window slideshow div starts here 
+    let startIndex2 = 0;
+    let movieImages4 = [
+        "https://htmldemo.net/oestin/oestin/img/slider/1.jpg",
+        "https://htmldemo.net/oestin/oestin/img/slider/2.jpg",
+    ];
+
+    const windowSize2 = 1;
+
+    function slideDivs2(startIndex2) {
+        const container2 = document.querySelector('#slideshow4_1');
+        container2.innerHTML = '';
+
+        for (let i = startIndex2; i < startIndex2 + windowSize2; i++) {
+            const div = document.createElement('div');
+            div.className = "fade"
+            const image = document.createElement('img');
+            const text = document.createElement("h1")
+            text.className = "text"
+            text.textContent = "Welcome to Oestin"
+            image.src = movieImages4[i % movieImages4.length]; // use modulus to wrap around to the beginning of the array
+            div.append(image,text);
+
+            container2.appendChild(div);
+        }
+    }
+
+    slideDivs2(startIndex2);
+
+    function next2() {
+        startIndex2++;
+        slideDivs2(startIndex2 % movieImages4.length); // use modulus to wrap around to the beginning of the array
+    }
+
+    function prev2() {
+        startIndex2--;
+        slideDivs2((startIndex2 + movieImages4.length) % movieImages4.length); // use modulus to wrap around to the end of the array
+    }
+
+    document.getElementById('rightArrow2').addEventListener('click', next2);
+    document.getElementById('leftArrow2').addEventListener('click', prev2);
+
+
+
+    // Button
+
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+
+
+
+
+</script>
+
+</html>
