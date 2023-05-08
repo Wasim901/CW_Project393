@@ -5,7 +5,10 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    font-family:  Calibri;
+   
+
+
+ 
 
 }
 
@@ -78,6 +81,8 @@ ul li ul.dropdown li{
    top: 0;
     background-size: cover;
     background-position: center;
+    font-family: 'Ubuntu', sans-serif;
+    
 }
 #nav {
     display:flex;
@@ -108,7 +113,7 @@ ul li ul.dropdown li{
 
 }
 #first{
-    margin-right: 20%;
+    margin-right: 15%;
 }
 .head>a{
     text-decoration: none;
