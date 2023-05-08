@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" href="./index.css" type="text/css"> -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: Verdana, sans-serif;
+            font-family: 'Roboto', sans-serif;
             padding: 0px;
             margin: 0px;
         }
@@ -21,6 +20,11 @@
             display: none;
         }
 
+
+        body {
+            font-family: Verdana, sans-serif;
+            margin: 0
+        }
 
         #myBtn {
             display: none;
@@ -58,22 +62,72 @@
             transition: 0.5s ease;
         }
 
-        header {
-            /* margin-top: 10px; */
-            /* border: 1px solid red; */
-            text-align: center;
-            background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
-            height: 470px;
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
             width: 100%;
-            /* position: relative; */
-            /* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+            text-align: center;
         }
 
-        .background-overlay {
+
+        .active,
+        .dot:hover {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            .prev,
+            .next,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+
+        header {
+            /* border: 1px solid red; */
+            text-align: center;
             height: 470px;
             width: 100%;
-            background-color: rgba(2, 1, 0, 0.61);
         }
+
+
+        .background-overlay {
+            /* height: 470px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* height: 100%; */
+            width: 100%;
+            background-color: rgba(2, 1, 0, 0.205);
+            z-index: 1;
+        }
+
 
         .head {
             /* border: 1px solid red; */
@@ -86,6 +140,7 @@
             background-color: #01050e1a;
             position: relative;
             /* overflow: hidden; */
+
         }
 
 
@@ -117,6 +172,7 @@
             padding-top: 10px;
             line-height: 1px;
             margin-right: 20px;
+            z-index: 1;
         }
 
         .navigation .navigation-top {
@@ -230,6 +286,7 @@
             line-height: 10px;
             margin-top: 8px;
             text-align: start;
+            /* border: 1px solid red; */
 
         }
 
@@ -249,210 +306,140 @@
         }
 
         .submenu-megamenu {
+            /* border: 1px solid red; */
             display: flex;
             min-width: 400px;
-            min-height: 150px;
+            min-height: 170px;
             line-height: 15px;
+            font-size: 10px !important;
+            font-weight: 200;
+            line-height: 20px;
         }
 
 
-        .container {
-            /* border: 1px solid red; */
-            margin-top: 145px;
-        }
 
-        .container .center-text h1 {
-            /* border: 1px solid red; */
-            font-size: 35px;
-            font-weight: bolder;
-            color: white;
-        }
 
-        .container .center-text {
-            /* border: 1px solid red; */
-            color: white;
-            line-height: 18px;
-            padding-bottom: 80px;
-        }
-
-        .breadcrumb-bar {
-            width: 80%;
-            /* border: 1px solid red; */
-            margin: auto;
-            width: 60%;
-
-        }
-
-        .breadcrumb {
-            list-style-type: none;
-            /* border: 1px solid red; */
+        /* third window slideshow div starts here  */
+        #slideshow4_1 {
+            /* border: 5px solid red; */
+            width: 70%;
             display: flex;
-            color: white;
-            font-size: 18px;
-        }
-
-        .breadcrumb #color-text {
-            color: #b5876d;
-            /* font-size: 18px; */
-        }
-
-        .breadcrumb a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        .breadcrumb a:hover {
-            color: #b5876d;
-            transition: color 0.5s ease;
-        }
-
-        .middle {
-            /* border: 1px solid red; */
-            margin-top: 90px;
-
-        }
-
-        .middle .our-special-staff {
-            /* border: 1px solid red; */
+            margin: 20px auto;
+            justify-content: center;
             text-align: center;
-            margin: auto;
-            width: fit-content;
-
+            line-height: 5px;
+            transition: opacity 1s ease-in-out;
         }
 
-        .middle .our-special-staff h2 {
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 17px;
-            text-transform: uppercase;
-            /* padding-bottom: 8px; */
-            color: #444444;
-        }
-
-        .middle .our-special-staff p {
-            font-size: 15px;
-            line-height: 24px;
-            /* border: 1px solid red; */
-            width: 60%;
-            margin: auto;
-            color: #444444;
-
-        }
-
-        .staff_data {
-            /* border: 1px solid red; */
-            width: 65%;
-            padding-top: 50px;
-            margin: auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 10px;
-            row-gap: 30px;
-        }
-
-        .staff_data .card_list {
-            margin-top: 50px;
-            /* border: 1px solid red; */
-            /* width: fit-content; */
-            margin: 10px;
-        }
-
-        .staff_data .card_list .card {
-            /* border: 1px solid red;  */
-            position: relative;
+        #slideshow4_1 img {
             width: 100%;
-            margin: auto;
-        }
-
-        .card_list .card .card_img {
-            /* border: 1px solid red;  */
-            margin: auto;
-            /* max-width: 400px; */
-            width: fit-content;
-            position: relative;
-        }
-
-        .card .employee_img {
-            /* border: 1px solid red; */
-            /* max-width: 100%; */
-            width: 100%;
-            display: block;
-            margin: auto;
-        }
-
-
-        .card .teamHover {
-            /* border: 1px solid red; */
+            /* margin: auto; */
             position: absolute;
-            margin: auto;
+            left: 0;
+            top: 0;
+            color: #000;
+        }
+
+
+
+        .text {
+            position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
-            overflow: hidden;
-            width: 100%;
-            height: 0;
-            transition: all 0.4s ease 0s;
-            /* bottom: -100%; */
-        }
-
-
-        .teamHover h4 {
-            color: #ffffff;
-            margin-bottom: 2px;
-            display: block;
-            font-size: 28px !important;
-            line-height: 25px;
-            transform: translate3d(0px, 200%, 0px);
-            transition: transform 0.25s ease 0s;
-        }
-
-        .teamHover span {
-            color: #ffffff;
-            /* font-family: "raleway"; */
-            display: block;
-            line-height: 40px;
-            font-size: 16px !important;
-            margin-bottom: 14px;
-            font-weight: 300;
-            transform: translate3d(0px, 200%, 0px);
-            transition: transform 0.25s ease 0s;
-        }
-
-        .teamHover p {
-            width: 80%;
-            color: #ffffff;
-            display: block;
-            margin-bottom: 12px;
-            font-size: 16px !important;
-            font-weight: 300;
-            transform: translate3d(0px, 200%, 0px);
-            transition: transform 0.25s ease 0s;
-        }
-
-        .card:hover .teamHover {
-            height: 47%;
-        }
-
-
-        .teamHover .text {
-            color: white;
-            font-size: 18px;
-            position: relative;
-            top: 0;
-            left: 50%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+            margin: auto;
             text-align: center;
-            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform: translateY(50%);
         }
+
+        .text h1{
+            font-size: 50px;
+            z-index: 1;
+            color: #ff0000;
+        }
+
+
+        #slideshow4_1:hover .hover-text {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+
+
+        #rightArrow2 {
+            background-color: rgba(0, 0, 0, 0.377);
+            border: none;
+            position: absolute;
+            right: 0;
+            color: grey;
+            z-index: 2;
+            cursor: pointer;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        #leftArrow2 {
+            background-color: rgba(0, 0, 0, 0.377);
+            border: none;
+            position: absolute;
+            left: 0;
+            color: grey;
+            z-index: 2;
+            cursor: pointer;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+
+        }
+
+        #leftArrow2:hover,
+        #rightArrow2:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+
+            #leftArrow2,
+            #rightArrow2,
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+
 
 
         .client {
             /* border: 1px solid red; */
-            margin-top: 100px;
+            margin-top: 1000px;
             margin-bottom: 80px;
         }
 
@@ -570,6 +557,7 @@
 
         .first-cell {
             /* border: 1px solid red; */
+            margin: auto;
             padding: 20px;
             padding-top: 40px;
             width: 25%;
@@ -781,12 +769,11 @@
             font-weight: 700;
         }
 
-        .pagination-button a:hover{
+        .pagination-button a:hover {
             color: #b5876d;
             transition: 0.5s ease;
 
         }
-        
     </style>
 </head>
 
@@ -800,6 +787,7 @@
                         <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
                     </a>
                 </div>
+
                 <div class="navigation">
                     <div class="navigation-top">
                         <div class="header-contact">
@@ -881,40 +869,60 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <section>
-                <div class="container">
-                    <div class="center-text">
-                        <h1>OUR STAFF</h1>
-                        <p>A quality room of Oestin with sea or mountain view</p>
-                    </div>
-                    <div class="breadcrumb-bar">
-                        <div class="breadcrumb">
-                            <span><a href="index.html">Home</a>
-                                <span>//</span> <span id="color-text">Our Staff</span></span>
+        <div class="slideshow-container">
+            <button id="leftArrow2"> &lt; </button>
+            <button id="rightArrow2">&gt;</button>
+
+            <div id="slideshow4_1" class="overlay-content">
+                <div class="text">
+                    <h1>welcome to Oestin</h1>
+                </div>
+                <!-- append your first window slidshow here  -->
+            </div>
+        </div>
+        
+    </header>
+    <div class="row">
+        <div class="col-12">
+            <form action="#" method="post" class="search-form">
+                <div class="form-container fix">
+                    <div class="box-select">
+                        <div class="select date">
+                            <input type="date" name="arrive" />
+                        </div>
+                        <div class="select date">
+                            <input type="date" name="departure" />
+                        </div>
+                        <div class="select arrow">
+                            <select name="adults">
+                                <option>ADULTS</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
+                        </div>
+                        <div class="select arrow">
+                            <select name="children">
+                                <option>CHILDREN</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                            </select>
                         </div>
                     </div>
+                    <button type="submit" class="search-default-btn"> Check Availability</button>
                 </div>
-            </section>
+            </form>
         </div>
-    </header>
-
-
-
-    <section>
-        <div class="middle">
-            <div class="our-special-staff">
-                <h2>OUR SPECIAL STAFF</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis,
-                    eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
-            </div>
-            <div class="staff_data">
-                <!-- append the data here -->
-            </div>
-            <div class="pagination-button">
-                <!-- buttons here -->
-            </div>
-        </div>
+    </div>
     </section>
     <div class="client">
         <div class="client-image">
@@ -931,9 +939,9 @@
                 <div>
                     <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/4.png"></a>
                 </div>
-                <!-- <div>
+                <div>
                     <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
-                </div> -->
+                </div>
             </div>
         </div>
     </div>
@@ -1029,135 +1037,56 @@
         </div>
     </footer>
 
+
+
 </body>
 <script>
-    let staff = document.querySelector(".staff_data")
-    // fetchData(1)
 
-    async function fetchData(num) {
-        console.log(num)
-        try {
-            let res = await fetch(`https://645360a0e9ac46cedf23a59b.mockapi.io/staff`)
-            let data = await res.json()
-            console.log(data)
-            DisplayData(data)
-        }
-        catch (err) {
-            console.log(err)
-        }
-    }
+    // third window slideshow div starts here 
+    let startIndex2 = 0;
+    let movieImages4 = [
+        "https://htmldemo.net/oestin/oestin/img/slider/1.jpg",
+        "https://htmldemo.net/oestin/oestin/img/slider/2.jpg",
+    ];
 
+    const windowSize2 = 1;
 
+    function slideDivs2(startIndex2) {
+        const container2 = document.querySelector('#slideshow4_1');
+        container2.innerHTML = '';
 
-    function createButton(id) {
-        let button = document.createElement("button");
-        button.className = "pagination-button"
-        button.setAttribute("data-page-number", id)
-        button.textContent = id
-        button.addEventListener("click", () => {
-            fetchData(id);
-        })
-        return button;
-    }
+        for (let i = startIndex2; i < startIndex2 + windowSize2; i++) {
+            const div = document.createElement('div');
+            div.className = "fade"
+            const image = document.createElement('img');
+            const text = document.createElement("h1")
+            text.className = "text"
+            text.textContent = "Welcome to Oestin"
+            image.src = movieImages4[i % movieImages4.length]; // use modulus to wrap around to the beginning of the array
+            div.append(image,text);
 
-    let currentPage = 1;
-    let rowsPerPage = 6;
-
-
-    function fetchData(page = 1) {
-        fetch("https://645360a0e9ac46cedf23a59b.mockapi.io/staff")
-            .then(function (res) {
-                return res.json();
-            })
-            .then(function (data) {
-                currentPage = page;
-                // travelodata = data;
-                DisplayData(data);
-            })
-            .catch(function (e) {
-                console.log(e);
-            })
-    }
-
-
-
-    function DisplayData(data) {
-        staff.innerHTML = ""
-
-        let startIndex = (currentPage - 1) * rowsPerPage;
-        let endIndex = startIndex + rowsPerPage;
-        let paginatedData = data.slice(startIndex, endIndex);
-
-        for (let i = 0; i < paginatedData.length; i++) {
-            let cardList = document.createElement("div")
-            cardList.className = "card_list"
-
-            let card = document.createElement("div")
-            card.className = "card"
-            card.setAttribute("data-id", paginatedData[i].id)
-
-            let cardImage = document.createElement("div")
-            cardImage.className = "card_img"
-
-            let img = document.createElement("img")
-            img.className = "employee_img"
-            img.src = paginatedData[i].image;
-
-            let teamHover = document.createElement("div")
-            teamHover.className = "teamHover"
-
-            let name = document.createElement("h4")
-            name.className = "text"
-            name.textContent = paginatedData[i].name;
-
-            let designation = document.createElement("span")
-            designation.className = "text"
-            designation.textContent = `(${paginatedData[i].designation})`;
-
-            let description = document.createElement("p")
-            description.className = "text"
-            description.textContent = paginatedData[i].description;
-
-            cardImage.append(img)
-
-            teamHover.append(name, designation, description)
-
-            card.append(cardImage, teamHover)
-            // data.forEach(item => {
-            cardList.append(card)
-
-
-            // })
-            staff.append(cardList)
-
-        }
-        let totalPages = Math.ceil(data.length / rowsPerPage);
-        // let pagination = document.querySelector(".pagination");
-        let page = document.querySelector(".pagination-button")
-
-        page.innerHTML = "";
-        for (let i = 1; i <= totalPages; i++) {
-            let link = document.createElement("a");
-            link.href = "#";
-            link.innerText = i;
-            if (i === currentPage) {
-                link.classList.add("active");
-            }
-            link.addEventListener("click", function (event) {
-                event.preventDefault();
-                fetchData(i);
-            });
-
-            page.appendChild(link);
+            container2.appendChild(div);
         }
     }
-    // card()
 
-    window.addEventListener("load", function () {
-        fetchData(1)
-    })
+    slideDivs2(startIndex2);
+
+    function next2() {
+        startIndex2++;
+        slideDivs2(startIndex2 % movieImages4.length); // use modulus to wrap around to the beginning of the array
+    }
+
+    function prev2() {
+        startIndex2--;
+        slideDivs2((startIndex2 + movieImages4.length) % movieImages4.length); // use modulus to wrap around to the end of the array
+    }
+
+    document.getElementById('rightArrow2').addEventListener('click', next2);
+    document.getElementById('leftArrow2').addEventListener('click', prev2);
 
 
+
+    // Button
 
     let mybutton = document.getElementById("myBtn");
 
@@ -1177,6 +1106,9 @@
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
     }
+
+
+
 
 </script>
 
