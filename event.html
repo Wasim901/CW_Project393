@@ -5,69 +5,840 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="styles.css">
+        
          <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
          <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         </head>
-    <body>
+        <style>
+            
 
-    <div  class="nav" >
-        <div id="nav" >
 
-           <div  id="first">
-               <a href=""><img src="./image/logo.png" alt=""></a>
-           </div>
-           
-           <div>
-                        <div class="head">
-                            <a href="#" id="contact">contact : 0123456789</a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-linkedin-in"></i></a>           
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+
+
+ 
+
+}
+
+.dropdown li{
+    display: inline-block;
+    position: relative;
+
+}   
+
+
+.uk li{
+    display: inline-block;
+    position: relative;
+
+}
+
+ul li a{
+display: block;
+padding: 20px 25px ;
+color: white;
+text-decoration: none;
+text-align: center;
+font-size: 20px;
+}
+ul li ul.dropdown li{
+    display: block;
+    background-color: white;
+    color: black;
     
-                        </div>
+
+}
+ul li ul.dropdown li a{
+
+    color: black;
+    
+
+}
+ul li ul.dropdown{
+    width:100%;
+    
+    position: absolute;
+    z-index: 999;
+    display:none;
+    
+
+}
+.mid a:hover{
+    color: orange;
+}
+ul li a:hover{
+    color: orange;
+   
+  
+   
+
+}
+ul li:hover ul.dropdown{
+    
+    display:block;
+}
+ul li ul.dropdown li{
+    display: block;
+    background-color: white;
+    color: black;
+    
+
+}
+
+
+.background-overlay{
+    background-image:url(./image/1.jpg) ;
+    height:550px;
+   top: 0;
+    background-size: cover;
+    background-position: center;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+#nav {
+    display:flex;
+    position: fixed;
+    top: 0;
+ margin-top:0px ;
+   background-color:rgba(0,0, 0, 0.6);
+   width:100%
+   
+    
+}
+@media all and (max-width:800px){
+    #dis{
+        display: none;
+    }
+    
+   
+      
+  }
+
+.nav .menu-hamburger{
+    display:none;
+    width: 30px;
+    position:absolute;
+    top: 50px;
+    right:50px;
+
+
+}
+#first{
+    margin-right: 15%;
+}
+.head>a{
+    text-decoration: none;
+margin:20px;
+color:white 
+}
+.title>a{
+    text-decoration: none;
+margin:20px;
+color:white
+
+}
+#contact{
+    font-size: 20px;
+    margin-right: 40%;
+}
+
+.imgdiv {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 60px;
+    column-gap: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .imgdiv1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imgdiv1 img {
+    width: 100%;
+    height: 400px;
+    opacity: 0.9;
+  }
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .imgdiv1text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+  }
+  
+  .imgdiv1text h4 {
+    margin: 0;
+    font-size: 30px;
+   white-space: nowrap;
+  }
+
+
+  .imgdiv1:hover .price {
+  opacity: 1;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.price {
+  position: absolute;
+  top:40%;
+left: 23%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;
+}
+
+.imgdiv1:hover .ptext {
+  opacity: 1;
+  animation: slideIn 0.5s backwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.ptext{
+    position: absolute;
+ top:50%;
+left: 2%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+  font-size: 14px;
+}
+
+.imgdiv1roomtype {
+      position: absolute;
+      top: 30%;
+      left: 23%;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0s ease-in-out, bottom 0.5s ease-in-out;
+      z-index: 2;
+    }
+
+    .imgdiv1:hover .imgdiv1roomtype {
+      opacity: 1;
+      bottom: 20px;
+    }
+
+ @keyframes slideIn {
+  from {
+transform: translateX(100%);
+  }
+to {
+transform: translateX(0);
+  }
+}
+.imgdiv1:hover .imgdiv1text {
+      opacity: 0;
+    }
+.imgdiv1:hover .button{
+    opacity: 1;
+      padding: 10px 20px;
+      border: 0px;
+}
+.button{
+    position: absolute;
+ top:70%;
+left: 35%;
+ color: white;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+font-size: 20px;
+  background-color: rgb(164, 92, 99);
+}
+@keyframes slideIn {
+  from {
+transform: translateX(100%);
+  }
+to {
+transform: translateX(0);
+  }
+}
+button:hover{
+    background-color: white;
+    color: rgb(164, 92, 99);
+}
+.event{
+    text-align: center;
+    color: white;
+   padding-top:150px ;
+    
+}
+.up{
+    text-align: center;
+    color:rgb(10, 2, 2);
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.mid{
+    display:flex;
+    padding-left: 200px ;
+    padding-right: 200px ;
+    
+ 
+}
+.mid>a{
+    color:black;
+    text-decoration: none;
+   
+    margin: auto;
+    font-size: 25px;
+    margin-bottom: 70px;
+}
+#middle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    gap: 10px;
+    height:1600
+}
+
+#middle img {
+    width: 100%;
+}
+
+#middle > div:nth-child(1) {
+    
+    grid-area: 1/1/2/3;
+   
+}
+
+#middle > div:nth-child(2) {
+    
+    grid-area: 1/3/2/4;
+  
+}
+
+#middle > div:nth-child(3) {
+   
+    grid-area: 2/1/3/2;
+    
+}
+
+#middle > div:nth-child(4) {
+   
+    grid-area: 2/2/3/4;
+  
+}
+#middle > div:nth-child(5) {
+   
+    grid-area: 3/1/4/3;
+  
+}
+
+#middle > div:nth-child(6) {
+  
+    grid-area: 3/3/4/4;
+ 
+
+}
+
+
+@media only screen and (max-width: 800px) {
+    #middle {
+        grid-template-columns: 100%;
        
-                        <hr>
-        
-                        <div id="dis">
-                            <ul class="uk">
-                                <li><a href="#" >HOME</a></li> 
-                                <li><a href="#" >ROOMS </a>
-                                    <ul  class="dropdown">
-                                        <li><a href="#">Room List</a></li>
-                                        <li><a href="#">Room Grid</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#" >ACTIVITY </a>
-                                    <ul  class="dropdown">
-                                        <li><a href="#">Room List</a></li>
-                                        <li><a href="#">Room Grid</a></li>
-                                    </ul>
-                                </li>
-                                 
-                                <li><a href="#" >LOCATION</a></li> 
-                                <li><a href="#" >EVENT</a></li> 
-                                <li><a href="#" >TEAM</a></li>
-                                <li><a href="#" >CONTACT</a></li>
+        gap: 50px;
+        height: auto;
+    }
 
-                            </ul>
+    #middle > div:nth-child(1) {
+        grid-area: 1/1/2/2;
+    }
+
+    #middle > div:nth-child(2) {
+        grid-area: 2/1/3/2;
+    }
+
+    #middle > div:nth-child(3) {
+        grid-area: 3/1/4/2;
+    }
+
+    #middle > div:nth-child(4) {
+        grid-area: 4/1/5/2;
+    }
+
+    #middle > div:nth-child(5) {
+        grid-area: 5/1/6/2;
+    }
+
+    #middle > div:nth-child(6) {
+        grid-area: 6/1/7/2;
+    }
+}
+
+
+.low{
+    display:flex;
+    justify-content: space-around;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.news{
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+    width:100%;
+    height:170px;
+    padding-top: 70px;
+   background-color:beige;
+}
+#email{
+    font-size: 30px;
+}
+#submit{
+    font-size: 30px;
+    color:maroon;
+}
+.container{
+    max-width:1170;
+    background-color: red;
+    margin:auto;
+
+
+}
+ul{
+    list-style: none;
+}
+
+.foot1 img{
+    width:50%;
+    border: 0.5px solid grey;
+}
+.foot2 img{
+    width:15%;
+    border: 0.5px solid grey;
+}
+
+.footimg{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+}
+
+footer{
+
+
+    margin-top: 70px;
+display: inline-block;
+   padding: 30px 30px 30px 30px;
+    height: 300px;
+  background-color: rgb(43, 42, 42);
+  color: white;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 50px;
+   overflow: auto;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:rgb(164, 92, 99)
+}
+
+ #pi{
+    color:white
+ }
+ @media only screen and (max-width: 800px) {
+    /* Medium Screen  */
+    footer{
+        grid-template-columns: repeat(2,1fr);
+    }
+   
+    .footimg{
+        grid-template-columns: repeat(3,1fr);
+    }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+    /* Small Screen  */
+footer{
+    grid-template-columns: repeat(1,1fr);
+}
+
+    .footimg{
+        grid-template-columns :repeat(3,1fr);
+    }
+}
+
+
+
+header {
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 470px;
+    width: 100%;
+}
+
+
+.background-overlay {
+    /* height: 470px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    width: 100%;
+    background-color: rgba(2, 1, 0, 0.205);
+    z-index: 1;
+}
+
+
+.head {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    height: 115px;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    line-height: 1px;
+    background-color: #01050e1a;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+
+
+.logo {
+    /* border: 1px solid red; */
+    margin-left: 120px;
+    z-index: 1;
+}
+
+
+.head .logo ::after {
+    background: #b5876d none repeat scroll 0 0;
+    content: "";
+    height: 141px;
+    left: -5%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: skewX(-34deg);
+    transform: skewX(-34deg);
+    min-width: 35%;
+    z-index: -1;
+}
+
+.navigation {
+    /* border: 1px solid red; */
+    /* margin: auto; */
+    height: 90%;
+    width: 45%;
+    padding-top: 10px;
+    line-height: 1px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.navigation .navigation-top {
+    width: 80%;
+    /* border: 1px solid red; */
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navigation-top .header-contact {
+    font-size: 13px;
+}
+
+#contact-color {
+    color: #b5876d;
+}
+
+
+.social-links {
+    /* border: 1px solid red; */
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links i {
+    color: white;
+    /* border: 1px solid red; */
+
+}
+
+.social-links i:hover {
+    color: #b5876d;
+    /* transition: opacity 1.5s ease, visibility 1.5s ease; */
+    transition: 0.5s ease;
+
+}
+
+.horizontal-line {
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    content: " ";
+    display: block;
+    border-bottom: 0.25px solid #777777;
+
+}
+
+.navigation-bottom {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.navigation-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown a {
+    font-size: 14px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown .dropdownbtn {
+    
+    position: relative;
+    z-index: 1;
+}
+
+
+.dropdown>a:hover {
+    color: #b5876d;
+    transition: color 0.5s ease;
+    /* transition: background-color 0.5s ease-in-out; */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5 ease;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 15px;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    line-height: 10px;
+    margin-top: 8px;
+    text-align: start;
+    /* border: 1px solid red; */
+
+}
+
+.submenu a {
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s ease;
+
+}
+
+.submenu a:hover {
+    background-color: #b5876d;
+    color: white;
+
+}
+
+
+
+.submenu-megamenu {
+   
+    display: flex;
+    min-width: 400px;
+    min-height: 170px;
+    line-height: 15px;
+    font-size: 10px !important;
+    font-weight: 200;
+    line-height: 20px;
+}
+@media only screen and (max-width: 800px) {
+
+    .mainmenu-hidden{
+     display:none;
+    }
+ }
+        </style>
+    <body>
+        <button onclick="topFunction()" id="myButton" title="Go to top"></button>
+        <header>
+            <div class="background-overlay">
+                <div class="head">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                        </a>
+                    </div>
+    
+                    <div class="navigation">
+                        <div class="navigation-top">
+                            <div class="header-contact">
+                                <span id="contact-color">Contact:</span>
+                                <span>0123456789</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                                <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
                         </div>
-           </div>
-           <img src="./image/5358649 (1).png" alt="menu
-           hamburger" class="menu-hamburger">
-        </div>    
+                        <div class="horizontal-line">
+                            <!-- <hr color="#b5876d"> -->
+                        </div>
+                        <div class="mainmenu-hidden"  >
+                            <nav>
+                                <div class="navigation-bottom">
+                                    <div class="dropdown">
+                                        <a href="index.html">HOME</a>
+                                    </div>
+                                    <div class="dropdown" >
+                                        <a class="dropdownbtn">ROOMS</a>
+                                        <div class="submenu" >
+                                            <a href="">ROOM LIST</a><br>
+                                            <a href="">ROOM DETAILS</a>
+                                        </div>
+                                    </div>
+    
+                                    <div class="dropdown" >
+                                        <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                                        <div class="submenu">
+                                            <div class="submenu-megamenu">
+                                                <div class="first">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Location</a>
+                                                    <a href="">Room Grid</a>
+                                                    <a href="">Room List</a>
+                                                    <a href="">Room Details</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+    
+                                                <div class="second">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Event</a>
+                                                    <a href="">Mega Menu</a>
+                                                    <a href="">Contact</a>
+                                                    <a href="">Team</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+    
+                                                <div class="second">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Room List</a>
+                                                    <a href="">Mega Menu</a>
+                                                    <a href="">Room Grid</a>
+                                                    <a href="">Room Details</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">LOCATION</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">EVENT</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="./OurStaff.html">TEAM</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">CONTACT</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div   class="event" style="font-family: 'Lobster', cursive;">
+                    <h1>EVENTS</h1>
+                    <p>A quality room of Oestin with sea or mountain view</p>
+                    </div>
+            </div>
+           
+           
+    
+        </header>
+       
     
     
-        <div   class="event">
-        <h1>EVENTS</h1>
-        <p>A quality room of Oestin with sea or mountain view</p>
-        </div>
+        
     
-    </div>
+    
     
      
-    <div  class="up">
+    <div  class="up" style="font-family: 'Lobster', cursive;">
         <h1>UPCOMING EVENTS</h1>
         <p>
             Lorem ipsum dolor sit amet, consectetur
@@ -85,7 +856,7 @@
        
     </div>
     
-    <div id="middle" class="imgdiv">
+    <div id="middle" class="imgdiv" style="font-family: 'Lobster', cursive;">
         <div  class="imgdiv1"><img src="./image/1 (1).jpg" alt=""><div class="img-overlay"></div>
         <div class="imgdiv1text"> <h4><span>MANAGEMENT CONFERENCES</span></h4></div>
         <div class="imgdiv1roomtype"><span class="roomtype">MANAGEMENT CONFERENCES</span></div>
@@ -137,7 +908,7 @@
 
       
     
-    <div  class="low">
+    <div  class="low" style="font-family: 'Lobster', cursive;">
         <a href=""> <img src="./image/p.png" alt=""></a>
         <a href=""><img src="./image/q.png" alt=""></a>
         <a href=""><img src="./image/r.png" alt=""></a>
@@ -152,7 +923,7 @@
           
     </div>
 
-    <footer>
+    <footer style=" font-family: 'Solitreo', cursive;">
         <div class="foot1" >
             <h1>Oestin</h1>
             <p>Lorem ipsum dolor sit amet, conse acteir our adipisicing elit, sed do eiusmod 
