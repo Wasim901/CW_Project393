@@ -450,6 +450,8 @@ ul{
 }
 
 footer{
+
+
     margin-top: 70px;
 display: inline-block;
    padding: 30px 30px 30px 30px;
@@ -641,7 +643,7 @@ header {
 
 
 .dropdown .dropdownbtn {
-    /* display: block; */
+    
     position: relative;
     z-index: 1;
 }
