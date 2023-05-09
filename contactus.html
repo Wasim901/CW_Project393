@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+
+body {
+		font-family: 'Roboto', sans-serif;
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	header {
+		/* margin-top: 10px; */
+		/* border: 1px solid red; */
+		text-align: center;
+		background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+		height: 470px;
+		width: 100%;
+		/* position: relative; */
+		/* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+	}
+
+	.background-overlay {
+		height: 470px;
+		width: 100%;
+		background-color: rgba(2, 1, 0, 0.61);
+	}
+
+	.head {
+		/* border: 1px solid red; */
+		display: flex;
+		align-items: center;
+		height: 115px;
+		padding-top: 5px;
+		justify-content: space-evenly;
+		line-height: 1px;
+		background-color: #01050e1a;
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+
+	.logo {
+		/* border: 1px solid red; */
+		margin-left: 120px;
+		z-index: 1;
+	}
+
+
+	.head .logo ::after {
+		background: #b5876d none repeat scroll 0 0;
+		content: "";
+		height: 141px;
+		left: -5%;
+		position: absolute;
+		top: 0;
+		-webkit-transform: skewX(-34deg);
+		transform: skewX(-34deg);
+		min-width: 35%;
+		z-index: -1;
+	}
+
+	.navigation {
+		/* border: 1px solid red; */
+		/* margin: auto; */
+		height: 90%;
+		width: 45%;
+		padding-top: 10px;
+		line-height: 1px;
+		margin-right: 20px;
+	}
+
+	.navigation .navigation-top {
+		width: 80%;
+		/* border: 1px solid red; */
+		color: white;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.navigation-top .header-contact {
+		font-size: 13px;
+	}
+
+	#contact-color {
+		color: #b5876d;
+	}
+
+
+	.social-links {
+		/* border: 1px solid red; */
+		width: 28%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.social-links i {
+		color: white;
+		/* border: 1px solid red; */
+
+	}
+
+	.social-links i:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.horizontal-line {
+		/* border: 1px solid red; */
+		width: 80%;
+		margin: auto;
+		content: " ";
+		display: block;
+		border-bottom: 0.25px solid #777777;
+
+	}
+
+	.navigation-bottom {
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
+		/* border: 1px solid red; */
+		display: flex;
+		justify-content: start;
+		gap: 30px;
+	}
+
+	.navigation-bottom a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.dropdown a {
+		font-size: 14px;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+
+	.dropdown .dropdownbtn {
+		/* display: block; */
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.dropdown>a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+		/* transition: background-color 0.5s ease-in-out; */
+	}
+
+	.dropdown:hover .submenu {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.submenu {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #ffffff;
+		padding: 15px;
+		min-width: 160px;
+		z-index: 1;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		line-height: 10px;
+		margin-top: 8px;
+		text-align: start;
+		
+	}
+
+	.submenu a {
+		display: block;
+		padding: 5px 10px;
+		color: #000;
+		text-decoration: none;
+
+	}
+
+	.submenu a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.submenu-megamenu {
+		display: flex;
+		min-width: 400px;
+		min-height: 150px;
+		line-height: 15px;
+	}
+
+
+	.container {
+		/* border: 1px solid red; */
+		margin-top: 145px;
+	}
+
+	.container .center-text h1 {
+		/* border: 1px solid red; */
+		font-size: 35px;
+		font-weight: bolder;
+		color: white;
+	}
+
+	.container .center-text {
+		/* border: 1px solid red; */
+		color: white;
+		line-height: 18px;
+		padding-bottom: 80px;
+	}
+
+	.breadcrumb-bar {
+		width: 80%;
+		/* border: 1px solid red; */
+		margin: auto;
+		width: 60%;
+
+	}
+
+	.breadcrumb {
+		list-style-type: none;
+		/* border: 1px solid red; */
+		display: flex;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb #color-text {
+		color: #b5876d;
+		/* font-size: 18px; */
+	}
+
+	.breadcrumb a {
+		text-decoration: none;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+        .main3{
+    display: flex;
+   justify-content: space-around;
+   /* border: 2px solid red; */
+   margin-top: 5%;
+   
+}
+.main3 img{
+    color: grey;
+}
+.main3 img :hover{
+    color:rgb(164, 92, 99)
+}
+.main4{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-top: 30px;
+    margin-left: 15%;
+}
+.email-form {
+  display: flex;
+  align-items: center;
+}
+
+.email-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.email-form button {
+  background-color: rgb(164, 92, 99);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+}
+
+.email-form button:hover {
+  background-color:black
+}
+
+main {
+			position: relative;
+			text-align: center;
+		}
+		.map {
+			display: inline-block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+            text-align: left;
+		}
+		.map2 {
+			position: absolute;
+			top: 11%;
+			left:34%;
+			transform: translate(-50%, -50%);
+			color:black;
+			font-size: 36px;
+			font-weight: bold;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: left;
+           
+		}
+        .map3  img{
+         width: 20%;
+        }
+        .map3{
+            width: 35%;
+            height: 120px;
+    
+            font-size: 14px;
+            background-color: white;
+        }
+      
+     .social img{
+width: 12%;
+     } 
+    .Main1{
+        display: flex;
+        justify-content: space-around;
+    }
+    .div2{
+        border: 2px;
+    }
+     button{
+        background-color: rgb(164, 92, 99);
+        color: white;
+        border: 0;
+        font-size: 19px;
+     }
+     button:hover{
+        background-color:rgb(43, 42, 42);
+        color:rgb(164, 92, 99);
+
+     }
+     .foot1 img{
+    width:50%;
+    border: 0.5px solid grey;
+}
+.foot2 img{
+    width:15%;
+    border: 0.5px solid grey;
+}
+
+.footimg{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+   
+}
+
+footer{
+    margin-top: 70px;
+display: inline-block;
+   padding: 30px 30px 30px 30px;
+    height: 300px;
+  background-color: rgb(43, 42, 42);
+  color: white;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 50px;
+   overflow: auto;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:rgb(164, 92, 99)
+}
+
+@media only screen and (max-width: 800px) {
+        /* Medium Screen  */
+        footer{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .imgdiv{
+            grid-template-columns: repeat(2,2fr);
+        }
+        .main3 img:nth-child(4),img:nth-child(5){
+            display: none;
+        }
+        .main4{
+            grid-template-columns: repeat(2,1fr);
+            margin-left: 1%;
+        }
+        .footimg{
+            grid-template-columns: repeat(3,1fr);
+        }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+        /* Small Screen  */
+    footer{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .imgdiv{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main3 img:nth-child(4),img:nth-child(5),img:nth-child(3){
+            display: none;
+        }
+        .main4{
+            grid-template-columns: repeat(1,1fr);
+            margin-left: 1%;
+        }
+        .footimg{
+            grid-template-columns :repeat(3,1fr);
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="background-overlay">
+            <div class="head">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                    </a>
+                </div>
+                <div class="navigation">
+                    <div class="navigation-top">
+                        <div class="header-contact">
+                            <span id="contact-color">Contact:</span>
+                            <span>0123456789</span>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                            <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                            <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+                    <div class="horizontal-line">
+                        <!-- <hr color="#b5876d"> -->
+                    </div>
+                    <div class="mainmenu-hidden">
+                        <nav>
+                            <div class="navigation-bottom">
+                                <div class="dropdown">
+                                    <a href="index.html">HOME</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a class="dropdownbtn">ROOMS</a>
+                                    <div class="submenu">
+                                        <a href="">ROOM LIST</a><br>
+                                        <a href="">ROOM DETAILS</a>
+                                    </div>
+                                </div>
+
+                                <div class="dropdown">
+                                    <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                                    <div class="submenu">
+                                        <div class="submenu-megamenu">
+                                            <div class="first">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Location</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Event</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Contact</a>
+                                                <a href="">Team</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+
+                                            <div class="second">
+                                                <a href="#">MEGAMENU LIST</a>
+                                                <a href="">Room List</a>
+                                                <a href="">Mega Menu</a>
+                                                <a href="">Room Grid</a>
+                                                <a href="">Room Details</a>
+                                                <a href="">Mega Menu</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">LOCATION</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">EVENT</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">TEAM</a>
+                                </div>
+                                <div class="dropdown">
+                                    <a href="">CONTACT</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <section>
+                <div class="container">
+                    <div class="center-text">
+                        <h1>CONTACT US</h1>
+                        <p>A quality room of Oestin with sea or mountain view</p>
+                    </div>
+                    <div class="breadcrumb-bar">
+                        <div class="breadcrumb">
+                            <span><a href="index.html">Home</a>
+                                <span>//</span> <span id="color-text">Our Staff</span></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+</body>
+</html>
+
+
+
+
+
+    <main>
+    <div class="map"></div>
+       <a href="" class="mapimg"><img src="https://nmcdn.io/e186d21f8c7946a19faed23c3da2f0da/347bed083486499c98f1609efa95efbd/files/blog/improving-google-maps-links-with-google-place-ids/maps-bg.jpg" alt="" style="width: 100%;"></a>
+    <div class="map2">
+        <div class="map3">
+            <h3>The Atrium</h3>
+            <h4>601 Lexington Avenue, 153 E 53rd St, <br> New York, NY 10022, United States </h4>
+            <h4>4.2 <img src="https://4.bp.blogspot.com/-MShxh_LVKZU/Uzlu0NKPJVI/AAAAAAAAA6M/bbaioqFFy6k/s1600/4halfstars.png" alt="">558 reviews
+            </h4>
+            <br>
+            <a href="https://www.google.com/maps?ll=40.758062,-73.969913&z=17&t=m&hl=en&gl=BD&mapclient=embed&cid=2665586107108505301">View larger map</a>
+        </div>
+    </div>
+    </main>
+
+
+    <div class="Main1">
+       
+        <div class="div1">
+            <p style="font-size: 35px;">CONTACT INFO </p>
+            <p>🕻0123456789</p>
+            
+            <p>✉️demo@example.com</p>
+            <p>⛯Your address goes here</p><br>
+            <h1>SOCIAL MEDIA</h1>
+            <div class="social"><a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-64.png" alt=""></a>
+                 <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-64.png" alt=""></a>
+                <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/rss_online_social_media-64.png" alt=""></a>
+                <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_twitter-64.png" alt=""></a>
+                <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_pinterest-64.png" alt=""></a>
+                </div>
+        </div>
+        <br>
+        <div class="div2">
+            <br><br>
+            <label for="" style="margin-bottom: 20px;font-size: 35px;color: rgb(43, 42, 42);">SEND YOUR MASSAGE</label>
+            <br>
+            <br>
+            <span style="margin-right:40px;"><input type="name" placeholder="name" style="padding: 10px;width:350px;background-color: rgb(243, 237, 237);border: 0;"></span><span><input type="email" placeholder="email" style="padding: 10px;width:350px;background-color:rgb(245, 237, 237);border: 0;"></span>
+        <br>
+        <br>
+        <br>
+        
+        
+            <input type="text" placeholder="Message here" style="width:780px;height: 200px;background-color: rgb(243, 238, 238);border: 0; vertical-align: top;">
+            <br><br>
+            <button style="padding: 10px;width: 130px;">SUBMIT</button>
+        
+        </div>
+
+    </div>
+    <div class="main3">
+
+        <a href=""> <img src="https://htmldemo.net/oestin/oestin/img/client/1-hover.png" alt=""></a>
+        <a href=""> <img src="https://htmldemo.net/oestin/oestin/img/client/2-hover.png" alt=""></a>
+        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/3-hover.png" alt=""></a>
+        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/4-hover.png" alt=""></a>
+        <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/5-hover.png" alt=""></a>
+     </div>
+     <div class="main4">
+         <h1 style="color: rgb(43, 42, 42);">NEWSLETTER SIGNUP</h1>
+         <div class="email-form">
+             <input type="email" placeholder="Enter your email address">
+             <button type="submit">Subscribe</button>
+           </div>
+     </div>
+     <footer>
+ <div class="foot1">
+     <h1>Oestin</h1>
+     <p>Lorem ipsum dolor sit amet, conse acteir our adipisicing elit, sed do eiusmod 
+          the a tempor the incididunt ut labore
+          et dolore magnaa liqua. Ut enim minimn.</p>
+          <br>
+          <br>
+     <div style="display: flex; "><a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_facebook-64.png" alt=""></a>
+     <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/instagram_online_social_media_photo-64.png" alt=""></a>
+     <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/rss_online_social_media-64.png" alt=""></a>
+     <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_twitter-64.png" alt=""></a>
+     <a href=""><img src="https://cdn2.iconfinder.com/data/icons/black-white-social-media/32/online_social_media_pinterest-64.png" alt=""></a>
+     </div>
+ </div>
+ <div class="foot2">
+     <h3>CONTACT US</h3>
+     <br>
+     <div >
+         <a href="" style="margin-top: 30px; "><img src="https://cdn3.iconfinder.com/data/icons/black-white-social-media/32/location_pin_logo_social_media-64.png" alt="">     <span>    Your address</span>
+            </a>
+        <br>
+        <br>
+         <a href="" style="margin-top: 30px;"><img src="https://cdn4.iconfinder.com/data/icons/black-white-social-media/32/mail_email_envelope_send_message-64.png" alt="">demo@example.com
+            </a>
+             <br>
+             <br>
+         <a href="" style="margin-top: 30px;"><img src="https://cdn3.iconfinder.com/data/icons/black-white-social-media/32/phone_logo_social_media-2-64.png" alt="">0123456789
+             0123456789</a>
+     </div>
+ </div>
+ <div class="foot3">
+     <h3>QUICK LINKS</h3>
+     <br>
+     <a href="" >Home</a>
+     <br>
+     <br>
+     <a href="">Stuffs</a>
+     <br>
+     <br>
+     <a href="" >Suits & Rooms</a>
+      <br>
+      <br>
+     <a href="" >Event</a>
+     <br>
+     <br>
+     <a href="" >Location</a>
+     <br>
+     <br>
+     <a href="" >Contact</a>
+ </div>
+ <div class="foot4">
+     <h3>COLLECTIONS</h3>
+     <br>
+     <div class="footimg">
+         
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt="">
+ 
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt="">
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/3.jpg" alt="">
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt="">
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt="">
+         <img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt="">
+     </div>
+ </div>
+     </footer>
+     <div class="foot5" style="background-color: black; color: white;text-align: center;height: 40px;display: inline-block;width: 100%;padding-bottom: 18px;">
+         <h5>© 2021 Oestin Made with  by 💗<span style="color: rgb(164, 92, 99);"> HasThemes</span> </h5>
+     </div>
+
+</body>
+</html>
