@@ -170,7 +170,8 @@ button:active {
 
 .admin-site button {
   font-size: 0.8rem;
-  padding
+  
+}
 
       </style>
 </head>
@@ -231,13 +232,13 @@ users.forEach((user, index) => {
             }
             Swal.fire(
                 'Deleted!',
-                'Your file has been deleted.',
+                'User\'s data has been deleted.',
                 'success'
             )
         } else if (result.dismiss === Swal.DismissReason.cancel) {
             Swal.fire(
                 'Cancelled',
-                'Your file is safe :)',
+                'user\'s data is safe :)',
                 'error'
             )
         }
@@ -256,13 +257,14 @@ users.forEach((user, index) => {
   usersTable.appendChild(row);
 });
 
+
 // Add CSS style for user-data class
 const userStyle = document.createElement('style');
 userStyle.textContent = `
 .user-data {
   font-size: 20px;
-}
-`;
+}`;
+
 document.head.appendChild(userStyle);
 
 
