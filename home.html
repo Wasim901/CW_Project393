@@ -2,14 +2,11 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
 <style>
-*{
-  font-family: 'Lobster', cursive;
-} 
 .container {
   position: relative;
   width: 50%;
-  font-family: 'Lobster', cursive;
 }
 
 .image {
@@ -45,10 +42,271 @@
   transform: translate(-50%, -50%);
   white-space: nowrap;
 }
+.supriya{
+  color: rgb(50, 49, 49);
+  font-family: 'Lobster', cursive;
+}
+.sup1{
+  display: flex;
+}
+.sup2{
+  width: 50%;
+  margin-left: 7%;
+}
+.footer-social a{
+  background-color:white;
+  color:  #b5876d;
+  padding:8px;
+border:0.5px solid rgb(220, 216, 216);
+margin-right: 20px;
+}
+.footer-social a:hover{
+  background-color:#b5876d;
+  color:  white;
+  padding:8px;
+  margin-right: 20px;
+}
+.sup3{
+  margin-left: 4% ;
+ 
+}
+
+.imgdiv {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+  }
+  
+  .imgdiv1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imgdiv1 img {
+    width: 100%;
+    height: 400px;
+    opacity: 0.9;
+  }
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .imgdiv1text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+  }
+  
+  .imgdiv1text h4 {
+    margin: 0;
+    font-size: 30px;
+   white-space: nowrap;
+  }
+  .imgdiv1:hover .price {
+  opacity: 1;
+  animation: fadeIn 0.9s forwards;
+  animation: slideIn 0.5s forwards;
+}
+.price {
+  position: absolute;
+  top:82%;
+left: 60%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;
+}
+
+.imgdiv1:hover .ptext {
+  opacity: 1;
+  animation: slideIn 0.5s backwards;
+}
+
+.ptext{
+    position: absolute;
+ top:50%;
+left: 2%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+  font-size: 14px;
+}
+
+.imgdiv1roomtype {
+      position: absolute;
+      top: 30%;
+      left: 23%;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0s ease-in-out, bottom 0.5s ease-in-out;
+      z-index: 2;
+    }
+
+    .imgdiv1:hover .imgdiv1roomtype {
+      opacity: 1;
+      bottom: 20px;
+    }
+
+.imgdiv1:hover .imgdiv1text {
+      opacity: 0;
+    }
+.imgdiv1:hover .button{
+    opacity: 1;
+      padding: 10px 20px;
+      border: 0px;
+      animation: slideIn 0.5s backwards;
+}
+
+.button{
+    position: absolute;
+ top:70%;
+left: 35%;
+ color: white;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+font-size: 20px;
+  background-color: rgb(164, 92, 99);
+  animation: slideIn 0.1s backwards;
+
+  
+}
+@keyframes slideIn {
+  from {
+transform: translateY(100%);
+  }
+to {
+transform: translateY(0);
+  }
+}
+button:hover{
+    background-color: white;
+    color: rgb(164, 92, 99); 
+}
+
+.sup4{
+  text-align: center;
+}
+@media only screen and (max-width: 800px) {
+
+.mainmenu-hidden{
+ display:none;
+}
+}
+@media only screen and (max-width: 500px) {
+        /* Small Screen  */
+        .sup1{
+          flex-direction: column;
+        }
+        .imgdiv{
+          grid-template-columns: repeat(1,1fr);
+        }
+}
+
+
+@media only screen and (max-width: 800px) {
+        /* Medium Screen  */
+        .sup1{
+          flex-direction: column;
+        }
+        .imgdiv{
+          grid-template-columns: repeat(2,1fr);
+        }
+}
 </style>
 </head>
 <body>
 
+<div class="supriya">
+  <div class="sup1">
+<div class="sup2">
+    <video src="" controls style="width:100%;margin-top: 35px;height: 450px;"></video>
+</div>
+<div class="sup3">
+  <h1>ABOUT US</h1>
+  <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut labore et dolore magna aliquabr. Utjij enim ad  minim <br> veniam, quis nostrud exercitation ullamco laboris nisi utjjij aliquip ex <br> ea commodo consequat . <br> <br>
+
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod <br> tempor incididunt ut labore.
+    <br><br>
+    Fipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</P>
+<br>
+<br>
+    <div class="footer-social">
+      <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+      <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+      <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+      <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+      <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<div class="sup4">
+  <h1>OUR FAVORITE ROOMS</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+<br>
+  <div class="imgdiv">
+    <div class="imgdiv1">
+      <img src="https://htmldemo.net/oestin/oestin/img/room/5.jpg" alt="">
+      <div class="img-overlay"></div>
+      <div class="imgdiv1text"> <h4><span>Single Room</span></h4></div>
+      <div class="imgdiv1roomtype"><span class="roomtype">Single Room</span></div>
+      <span class="price">$220    <br> Per Night</span>
+      <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+      <button class="button">Details</button>
+    </div>
+    <div class="imgdiv1">
+      <img src="https://htmldemo.net/oestin/oestin/img/room/6.jpg" alt="">
+      <div class="img-overlay"></div>
+      <div class="imgdiv1text"> <h4>Deluxe Suit</h4></div>
+      <div class="imgdiv1roomtype"><span class="roomtype">Deluxe Suit</span></div>
+      <span class="price">$150 <br> Per Night</span>
+      <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+      <button class="button">Details</button>
+    </div>
+    <div class="imgdiv1">
+      <img src="https://htmldemo.net/oestin/oestin/img/room/7.jpg" alt="">
+      <div class="img-overlay"></div>
+      <div class="imgdiv1text"> <h4>Royal Suite</h4></div>
+      <div class="imgdiv1roomtype"><span class="roomtype">Royal Suite</span></div>
+      <span class="price">$240 <br> Per Night</span>
+      <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+      <button class="button">Details</button>
+    </div>
+    <div class="imgdiv1">
+      <img src="https://htmldemo.net/oestin/oestin/img/room/8.jpg" alt="">
+      <div class="img-overlay"></div>
+      <div class="imgdiv1text"> <h4>Double Room</h4></div>
+      <div class="imgdiv1roomtype"><span class="roomtype">Double Room</span></div>
+      <span class="price">$180 <br> Per Night</span>
+      <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+      <button class="button">Details</button>
+    </div>
+
+  </div>
+
+</div>
+</div>
 <h2 style="text-align: center;">OUR BLOG</h2>
 <p style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt<br> ut labore et dolore magna aliqua. Ut enim ad minim exercitation ullamco laboris nisi..</p>
 <div  style="display: flex; gap: 10px;">
@@ -67,7 +325,7 @@
     </div>
   </div>
 </div>
-<div class="container" style="font-family: 'Lobster', cursive;">
+<div class="container">
 
 
     <img src="./image/cc2.jpg" alt="Avatar" class="image">
@@ -83,7 +341,7 @@
     </div>
   </div>
 
-  <div class="container" style="font-family: 'Lobster', cursive;">
+  <div class="container">
 
 
     <img src="./image/c3.jpg" alt="Avatar" class="image">

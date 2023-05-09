@@ -55,6 +55,9 @@ ul li ul.dropdown{
     
 
 }
+.mid a:hover{
+    color: orange;
+}
 ul li a:hover{
     color: orange;
    
@@ -75,9 +78,9 @@ ul li ul.dropdown li{
 }
 
 
-.nav{
+.background-overlay{
     background-image:url(./image/1.jpg) ;
-    height:450px;
+    height:550px;
    top: 0;
     background-size: cover;
     background-position: center;
@@ -290,7 +293,7 @@ button:hover{
 .event{
     text-align: center;
     color: white;
-   padding-top:200px ;
+   padding-top:150px ;
     
 }
 .up{
@@ -493,3 +496,218 @@ footer{
         grid-template-columns :repeat(3,1fr);
     }
 }
+
+
+
+header {
+    /* border: 1px solid red; */
+    text-align: center;
+    height: 470px;
+    width: 100%;
+}
+
+
+.background-overlay {
+    /* height: 470px; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    width: 100%;
+    background-color: rgba(2, 1, 0, 0.205);
+    z-index: 1;
+}
+
+
+.head {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    height: 115px;
+    padding-top: 5px;
+    justify-content: space-evenly;
+    line-height: 1px;
+    background-color: #01050e1a;
+    position: relative;
+    /* overflow: hidden; */
+
+}
+
+
+.logo {
+    /* border: 1px solid red; */
+    margin-left: 120px;
+    z-index: 1;
+}
+
+
+.head .logo ::after {
+    background: #b5876d none repeat scroll 0 0;
+    content: "";
+    height: 141px;
+    left: -5%;
+    position: absolute;
+    top: 0;
+    -webkit-transform: skewX(-34deg);
+    transform: skewX(-34deg);
+    min-width: 35%;
+    z-index: -1;
+}
+
+.navigation {
+    /* border: 1px solid red; */
+    /* margin: auto; */
+    height: 90%;
+    width: 45%;
+    padding-top: 10px;
+    line-height: 1px;
+    margin-right: 20px;
+    z-index: 1;
+}
+
+.navigation .navigation-top {
+    width: 80%;
+    /* border: 1px solid red; */
+    color: white;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.navigation-top .header-contact {
+    font-size: 13px;
+}
+
+#contact-color {
+    color: #b5876d;
+}
+
+
+.social-links {
+    /* border: 1px solid red; */
+    width: 28%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-links i {
+    color: white;
+    /* border: 1px solid red; */
+
+}
+
+.social-links i:hover {
+    color: #b5876d;
+    /* transition: opacity 1.5s ease, visibility 1.5s ease; */
+    transition: 0.5s ease;
+
+}
+
+.horizontal-line {
+    /* border: 1px solid red; */
+    width: 80%;
+    margin: auto;
+    content: " ";
+    display: block;
+    border-bottom: 0.25px solid #777777;
+
+}
+
+.navigation-bottom {
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+}
+
+.navigation-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown a {
+    font-size: 14px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown .dropdownbtn {
+    /* display: block; */
+    position: relative;
+    z-index: 1;
+}
+
+
+.dropdown>a:hover {
+    color: #b5876d;
+    transition: color 0.5s ease;
+    /* transition: background-color 0.5s ease-in-out; */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5 ease;
+}
+
+.submenu {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    padding: 15px;
+    min-width: 160px;
+    z-index: 1;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    line-height: 10px;
+    margin-top: 8px;
+    text-align: start;
+    /* border: 1px solid red; */
+
+}
+
+.submenu a {
+    display: block;
+    padding: 5px 10px;
+    color: #000;
+    text-decoration: none;
+    transition: 0.5s ease;
+
+}
+
+.submenu a:hover {
+    background-color: #b5876d;
+    color: white;
+
+}
+
+.submenu-megamenu {
+    /* border: 1px solid red; */
+    display: flex;
+    min-width: 400px;
+    min-height: 170px;
+    line-height: 15px;
+    font-size: 10px !important;
+    font-weight: 200;
+    line-height: 20px;
+}
+@media only screen and (max-width: 800px) {
+
+    .mainmenu-hidden{
+     display:none;
+    }
+ }
