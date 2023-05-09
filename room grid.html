@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Grid View</title>
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+/* body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} */
+.div1 img{
+    width: 100%;
+    height: 500px;
+    opacity: 0.5;
+}
+.div1{
+    background:rgb(0,0,0,0.7);
+ border: 2px solid red;
+width: 100%;
+height: 500px;  
+position: relative;
+text-align: center;
+color: #000000;
+font-size: 30px;
+ overflow: auto;
+      }
+ .div3 {
+ color:white;
+ position: absolute;
+ top: 50%;
+ left: 30%;
+ /* transform: translate(-50%, -50%); */
+}
+main {
+    text-align: center;
+    color: rgb(43, 42, 42);
+}
+.imgdiv {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 60px;
+    column-gap: 30px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  
+  .imgdiv1 {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .imgdiv1 img {
+    width: 100%;
+    height: 400px;
+    opacity: 0.9;
+  }
+  
+  .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.5;
+    z-index: 1;
+  }
+  
+  .imgdiv1text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 2;
+  }
+  
+  .imgdiv1text h4 {
+    margin: 0;
+    font-size: 30px;
+   white-space: nowrap;
+  }
+
+
+  .imgdiv1:hover .price {
+  opacity: 1;
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.price {
+  position: absolute;
+  top:40%;
+left: 23%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;
+}
+
+.imgdiv1:hover .ptext {
+  opacity: 1;
+  animation: slideIn 0.5s backwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+.ptext{
+    position: absolute;
+ top:50%;
+left: 2%;
+ color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+  font-size: 14px;
+}
+
+.imgdiv1roomtype {
+      position: absolute;
+      top: 30%;
+      left: 23%;
+      color: white;
+      font-size: 30px;
+      font-weight: bold;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0s ease-in-out, bottom 0.5s ease-in-out;
+      z-index: 2;
+    }
+
+    .imgdiv1:hover .imgdiv1roomtype {
+      opacity: 1;
+      bottom: 20px;
+    }
+
+ @keyframes slideIn {
+  from {
+transform: translateX(100%);
+  }
+to {
+transform: translateX(0);
+  }
+}
+.imgdiv1:hover .imgdiv1text {
+      opacity: 0;
+    }
+.imgdiv1:hover .button{
+    opacity: 1;
+      padding: 10px 20px;
+      border: 0px;
+}
+.button{
+    position: absolute;
+ top:70%;
+left: 35%;
+ color: white;
+  font-weight: bold;
+  opacity: 0;
+  z-index: 2;  
+font-size: 20px;
+  background-color: rgb(164, 92, 99);
+}
+@keyframes slideIn {
+  from {
+transform: translateX(100%);
+  }
+to {
+transform: translateX(0);
+  }
+}
+button:hover{
+    background-color: white;
+    color: rgb(164, 92, 99);
+}
+.main{
+    font-family: 'Lobster', cursive;
+}
+.main3{
+    display: flex;
+   justify-content: space-around;
+   /* border: 2px solid red; */
+   margin-top: 5%;
+   
+}
+.main3 img{
+    color: grey;
+}
+.main3 img :hover{
+    color:rgb(164, 92, 99)
+}
+.main4{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 40px;
+    margin-top: 30px;
+    margin-left: 15%;
+}
+.email-form {
+  display: flex;
+  align-items: center;
+  font-family: 'Lobster', cursive;
+}
+
+.email-form input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.email-form button {
+  background-color: rgb(164, 92, 99);
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  cursor: pointer;
+  font-family: 'Lobster', cursive;
+}
+
+.email-form button:hover {
+  background-color:black;
+  font-family: 'Lobster', cursive;
+}
+
+.foot1 img{
+    width:50%;
+    border: 0.5px solid grey;
+}
+.foot2 img{
+    width:15%;
+    border: 0.5px solid grey;
+}
+
+.footimg{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+   
+}
+
+footer{
+    margin-top: 70px;
+display: inline-block;
+   padding: 30px 30px 30px 30px;
+    height: 340px;
+  background-color: rgb(43, 42, 42);
+  color: white;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 50px;
+   overflow: auto;
+   font-family: 'Solitreo', cursive;
+}
+
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:rgb(164, 92, 99)
+}
+
+@media only screen and (max-width: 800px) {
+        /* Medium Screen  */
+        footer{
+            grid-template-columns: repeat(2,1fr);
+        }
+        .imgdiv{
+            grid-template-columns: repeat(2,2fr);
+        }
+        .main3 img:nth-child(4),img:nth-child(5){
+            display: none;
+        }
+        .main4{
+            grid-template-columns: repeat(2,1fr);
+            margin-left: 1%;
+        }
+        .footimg{
+            grid-template-columns: repeat(3,1fr);
+        }
+
+}
+
+
+@media only screen and (max-width: 500px) {
+        /* Small Screen  */
+    footer{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .imgdiv{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .main3 img:nth-child(4),img:nth-child(5),img:nth-child(3){
+            display: none;
+        }
+        .main4{
+            grid-template-columns: repeat(1,1fr);
+            margin-left: 1%;
+        }
+        .footimg{
+            grid-template-columns :repeat(3,1fr);
+        }
+    }
+#first {
+  position: relative;
+}
+
+#first::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Change the opacity as desired */
+  z-index: 1;
+}
+
+
+
+
+
+
+body {
+		font-family: 'Roboto', sans-serif;
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	header {
+		/* margin-top: 10px; */
+		/* border: 1px solid red; */
+		text-align: center;
+		background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+		height: 470px;
+		width: 100%;
+		/* position: relative; */
+		/* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+        font-family: 'Ubuntu', sans-serif;
+	}
+
+	.background-overlay {
+		height: 470px;
+		width: 100%;
+		background-color: rgba(2, 1, 0, 0.61);
+	}
+
+	.head {
+		/* border: 1px solid red; */
+		display: flex;
+		align-items: center;
+		height: 115px;
+		padding-top: 5px;
+		justify-content: space-evenly;
+		line-height: 1px;
+		background-color: #01050e1a;
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+
+	.logo {
+		/* border: 1px solid red; */
+		margin-left: 120px;
+		z-index: 1;
+	}
+
+
+	.head .logo ::after {
+		background: #b5876d none repeat scroll 0 0;
+		content: "";
+		height: 141px;
+		left: -5%;
+		position: absolute;
+		top: 0;
+		-webkit-transform: skewX(-34deg);
+		transform: skewX(-34deg);
+		min-width: 35%;
+		z-index: -1;
+	}
+
+	.navigation {
+		/* border: 1px solid red; */
+		/* margin: auto; */
+		height: 90%;
+		width: 45%;
+		padding-top: 10px;
+		line-height: 1px;
+		margin-right: 20px;
+	}
+
+	.navigation .navigation-top {
+		width: 80%;
+		/* border: 1px solid red; */
+		color: white;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.navigation-top .header-contact {
+		font-size: 13px;
+	}
+
+	#contact-color {
+		color: #b5876d;
+	}
+
+
+	.social-links {
+		/* border: 1px solid red; */
+		width: 28%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.social-links i {
+		color: white;
+		/* border: 1px solid red; */
+
+	}
+
+	.social-links i:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.horizontal-line {
+		/* border: 1px solid red; */
+		width: 80%;
+		margin: auto;
+		content: " ";
+		display: block;
+		border-bottom: 0.25px solid #777777;
+
+	}
+
+	.navigation-bottom {
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
+		/* border: 1px solid red; */
+		display: flex;
+		justify-content: start;
+		gap: 30px;
+	}
+
+	.navigation-bottom a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.dropdown a {
+		font-size: 14px;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+
+	.dropdown .dropdownbtn {
+		/* display: block; */
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.dropdown>a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+		/* transition: background-color 0.5s ease-in-out; */
+	}
+
+	.dropdown:hover .submenu {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.submenu {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #ffffff;
+		padding: 15px;
+		min-width: 160px;
+		z-index: 1;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		line-height: 10px;
+		margin-top: 8px;
+		text-align: start;
+		
+	}
+
+	.submenu a {
+		display: block;
+		padding: 5px 10px;
+		color: #000;
+		text-decoration: none;
+
+	}
+
+	.submenu a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.submenu-megamenu {
+		display: flex;
+		min-width: 400px;
+		min-height: 150px;
+		line-height: 15px;
+	}
+
+
+	.container {
+		/* border: 1px solid red; */
+		margin-top: 145px;
+	}
+
+	.container .center-text h1 {
+		/* border: 1px solid red; */
+		font-size: 35px;
+		font-weight: bolder;
+		color: white;
+	}
+
+	.container .center-text {
+		/* border: 1px solid red; */
+		color: white;
+		line-height: 18px;
+		padding-bottom: 80px;
+	}
+
+	.breadcrumb-bar {
+		width: 80%;
+		/* border: 1px solid red; */
+		margin: auto;
+		width: 60%;
+
+	}
+
+	.breadcrumb {
+		list-style-type: none;
+		/* border: 1px solid red; */
+		display: flex;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb #color-text {
+		color: #b5876d;
+		/* font-size: 18px; */
+	}
+
+	.breadcrumb a {
+		text-decoration: none;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+    .footer-social a{
+  background-color:rgb(43, 42, 42);
+  color:  #7d7b79;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+border:0.5px solid rgb(220, 216, 216);
+margin-right: 12px;
+}
+.footer-social a:hover{
+  background-color:#b5876d;
+  color:  white;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  margin-right: 12px;
+}
+
+.second-cell{
+            /* border: 1px solid red; */
+            padding: 10px;
+            line-height: 22px;
+            margin-right: 90px;
+
+        }
+
+        .second-cell h3{
+            /* border: 1px solid red; */
+            margin-bottom: 30px !important;
+            margin-top: 15px;
+            line-height: 40px;
+            /* margin-bottom: 50px; */
+        }
+
+        .second-cell .address {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 18px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .address i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+            transition: 0.5s;
+            
+        }
+
+        .second-cell .email {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 18px !important;
+            font-weight: 300 !important;
+        }
+
+        .second-cell .email i {
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 18px;
+            color: #b5876d;
+            padding: 8px;
+            transition: 0.5s;
+        }
+
+        .second-cell i:hover{
+            background-color: #e9e5e0;
+            transition-delay: color 0.5s ease;
+        }
+
+        .second-cell .phone {
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 15px !important;
+            font-weight: 300 !important;
+        }    
+
+        .second-cell .phone i{
+            border: 1px solid rgb(231, 226, 226);
+            margin-right: 15px;
+            font-size: 15px;
+            color: #b5876d;
+            padding: 10px;
+            transition: 0.5s;
+
+        }
+
+    </style>
+</head>
+<body>
+
+
+<header>
+  <div class="background-overlay">
+      <div class="head">
+          <div class="logo">
+              <a href="index.html">
+                  <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+              </a>
+          </div>
+          <div class="navigation">
+              <div class="navigation-top">
+                  <div class="header-contact">
+                      <span id="contact-color">Contact:</span>
+                      <span>0123456789</span>
+                  </div>
+                  <div class="social-links">
+                      <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                      <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                      <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                      <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                      <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                  </div>
+              </div>
+              <div class="horizontal-line">
+                  <!-- <hr color="#b5876d"> -->
+              </div>
+              <div class="mainmenu-hidden">
+                  <nav>
+                      <div class="navigation-bottom">
+                          <div class="dropdown">
+                              <a href="index.html">HOME</a>
+                          </div>
+                          <div class="dropdown">
+                              <a class="dropdownbtn">ROOMS</a>
+                              <div class="submenu">
+                                  <a href="">ROOM LIST</a><br>
+                                  <a href="">ROOM DETAILS</a>
+                              </div>
+                          </div>
+
+                          <div class="dropdown">
+                              <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                              <div class="submenu">
+                                  <div class="submenu-megamenu">
+                                      <div class="first">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Location</a>
+                                          <a href="">Room Grid</a>
+                                          <a href="">Room List</a>
+                                          <a href="">Room Details</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+
+                                      <div class="second">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Event</a>
+                                          <a href="">Mega Menu</a>
+                                          <a href="">Contact</a>
+                                          <a href="">Team</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+
+                                      <div class="second">
+                                          <a href="#">MEGAMENU LIST</a>
+                                          <a href="">Room List</a>
+                                          <a href="">Mega Menu</a>
+                                          <a href="">Room Grid</a>
+                                          <a href="">Room Details</a>
+                                          <a href="">Mega Menu</a>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">LOCATION</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">EVENT</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">TEAM</a>
+                          </div>
+                          <div class="dropdown">
+                              <a href="">CONTACT</a>
+                          </div>
+                      </div>
+                  </nav>
+              </div>
+          </div>
+      </div>
+
+      <section>
+          <div class="container">
+              <div class="center-text">
+                  <h1>ROOM - GRID VIEW</h1>
+                  <p>A quality room of Oestin with sea or mountain view</p>
+              </div>
+              <div class="breadcrumb-bar">
+                  <div class="breadcrumb">
+                      <span><a href="index.html">Home</a>
+                          <span>//</span> <span id="color-text">Our Staff</span></span>
+                  </div>
+              </div>
+          </div>
+      </section>
+  </div>
+</header>
+
+
+    <main >
+        <br>
+        <br>
+        <h1 style="font-family: 'Lobster', cursive;">OUR ATR ROOMS</h1>
+        
+        
+        <p style="font-family: 'Lobster', cursive;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis, eu <br> condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
+        <br>
+        <br>
+        <br>
+        
+        <div class="imgdiv">
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/5.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4><span>Single Room</span></h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Single Room</span></div>
+              <span class="price">$220 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/6.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4>Deluxe Suit</h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Deluxe Suit</span></div>
+              <span class="price">$150 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/7.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4>Royal Suite</h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Royal Suite</span></div>
+              <span class="price">$240 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/8.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4>Double Room</h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Double Room</span></div>
+              <span class="price">$180 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/9.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4>Deluxe Suite</h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Deluxe Suite</span></div>
+              <span class="price">$130 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+            <div class="imgdiv1">
+              <img src="https://htmldemo.net/oestin/oestin/img/room/5.jpg" alt="">
+              <div class="img-overlay"></div>
+              <div class="imgdiv1text"> <h4>Single Room</h4></div>
+              <div class="imgdiv1roomtype"><span class="roomtype">Single Room</span></div>
+              <span class="price">$180 Per Night</span>
+              <span class="ptext">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor</span>
+              <button class="button">Details</button>
+            </div>
+          </div>
+          
+    </main>
+   
+
+    <div class="main2" style="margin-top: 3%; ">
+<span class="number" style="margin-left: 50%;color:rgb(43, 42, 42);">1</span><span class="number" style="margin-left: 20px;color: rgb(164, 92, 99);font-size: 30px;">2</span></span><span class="number" style="margin-left: 20px;color:rgb(43, 42, 42)">3</span>
+    </div>
+
+    <div class="main3">
+
+       <a href=""> <img src="https://htmldemo.net/oestin/oestin/img/client/1-hover.png" alt=""></a>
+       <a href=""> <img src="https://htmldemo.net/oestin/oestin/img/client/2-hover.png" alt=""></a>
+       <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/3-hover.png" alt=""></a>
+       <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/4-hover.png" alt=""></a>
+       <a href=""><img src="https://htmldemo.net/oestin/oestin/img/client/5-hover.png" alt=""></a>
+    </div>
+    <div class="main4">
+        <h1 style="color: rgb(43, 42, 42);font-family: 'Lobster', cursive;">NEWSLETTER SIGNUP</h1>
+        <div class="email-form">
+            <input type="email" placeholder="Enter your email address">
+            <button type="submit">Subscribe</button>
+          </div>
+    </div>
+    <footer>
+<div class="foot1">
+    <h1>Oestin</h1>
+    <p>Lorem ipsum dolor sit amet, conse acteir our adipisicing elit, sed do eiusmod 
+         the a tempor the incididunt ut labore
+         et dolore magnaa liqua. Ut enim minimn.</p>
+         <br>
+         <br>
+         <div class="footer-social">
+            <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+            <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+            <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+            <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+        </div>
+</div>
+<div class="foot2">
+    <h3>CONTACT US</h3>
+    
+    <div class="second-cell">
+        <div class="address">
+            <span class="icon">
+                <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <span>
+                Your address <br> goes here
+            </span>
+        </div>
+        <div class="email">
+            <span class="icon">
+                <i class="fa fa-envelope-o"></i>
+            </span>
+            <span>
+                demo@example.com <br>
+                demo@example.com
+            </span>
+        </div>
+        <div class="phone">
+            <span class="icon">
+                <i class="fas fa-phone-square-alt"></i>
+            </span>
+            <span>
+                0123456789 <br>
+                0123456789
+            </span>
+        </div>
+    </div>
+
+</div>
+<div class="foot3">
+    <h3>QUICK LINKS</h3>
+    <br>
+    <a href="" style="font-size: 22px;" >Home</a>
+
+    <br>
+    <a href="" style="font-size: 22px;">Stuffs</a>
+ 
+    <br>
+    <a href="" style="font-size: 22px;" >Suits & Rooms</a>
+    
+     <br>
+    <a href="" style="font-size: 22px;" >Event</a>
+  
+    <br>
+    <a href=""  style="font-size: 22px;">Location</a>
+   
+    <br>
+    <a href=""  style="font-size: 22px;">Contact</a>
+</div>
+<div class="foot4">
+    <h3>COLLECTIONS</h3>
+    <br>
+    <div class="footimg">
+        
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt="">
+
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/3.jpg" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt="">
+        <img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt="">
+    </div>
+</div>
+    </footer>
+    <div class="foot5" style="background-color: black; color: white;text-align: center;height: 40px;display: inline-block;width: 100%;padding-bottom: 18px;">
+        <h5>© 2021 Oestin Made with  by 💗<span style="color: rgb(164, 92, 99);"> HasThemes</span> </h5>
+    </div>
+</body>
+</html>

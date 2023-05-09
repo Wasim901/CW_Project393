@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oestin Room List View</title>
     <a href="roomlist.css"></a>
-
+    <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
 </head>
 <style>
     body {
@@ -15,10 +15,6 @@
         margin: 0px;
         box-sizing: border-box;
     }
-
-
-
-
 
     .nav {
         width: 100%;
@@ -31,8 +27,6 @@
         opacity: 70%;
         background-color: rgb(36, 36, 95);
     }
-
-
 
     .options {
         margin-right: 90px;
@@ -135,7 +129,7 @@
         margin-top: 70px;
     }
 
-    #rooms {
+    #room {
         width: 85%;
         margin: auto;
     }
@@ -188,12 +182,625 @@
     h4 {
         color: white;
     }
+
+    #third a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #fourth img {
+        width: 40px;
+        height: 20px;
+    }
+
+    #biggest {
+        display: flex;
+
+    }
+
+    #small {
+        padding-top: 20px;
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-rows: repeat(2, 1fr); */
+        gap: 10px;
+    }
+
+    #bigin {
+        width: 100%;
+        gap: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .team h4 {
+        color: black;
+        font-size: 30px;
+    }
+
+    .team p {
+        color: black;
+        text-align: left;
+        font-size: 20px;
+    }
+
+    .card {
+        display: flex;
+        padding-top: 50px;
+
+    }
+
+    .team {
+        padding-left: 70px;
+    }
+
+    #images {
+        margin-top: 100px;
+    }
+
+    #inputs {
+        margin-bottom: 50px;
+    }
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color .3s;
+    }
+
+    /* Style the active/current link */
+    .pagination a.active {
+        background-color: dodgerblue;
+        color: white;
+    }
+
+    /* Add a grey background color on mouse-over */
+    .pagination a:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+
+
+    /* rahul */
+
+    .newsletter {
+        /* border: 1px solid red; */
+        padding-top: 50px;
+        padding-bottom: 50px;
+        background-color: #f8f9fa;
+    }
+
+    .newsletter .newsletter-container {
+        /* border: 1px solid red; */
+        width: 45%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    .newsletter .newsletter-container h3 {
+        /* border: 1px solid red; */
+        font-size: 27px;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+    }
+
+    .newsletter-container .newsletter-input {
+        display: flex;
+        /* border: 1px solid red; */
+        width: 50%;
+    }
+
+
+    .newsletter-input #search {
+        /* border: 1px solid red; */
+        width: 60%;
+        padding: 11px;
+        background-color: #f8f9fa;
+        border: 1px solid rgb(184, 182, 182);
+        font-family: 'Roboto', sans-serif;
+        font-size: 15px;
+    }
+
+
+    .newsletter-input #button {
+        /* border: 1px solid red; */
+        color: #FFF;
+        border: none;
+        border-radius: 0px;
+        padding: 12px;
+        display: inline-block;
+        /* font-family: "Lucida Console", Monaco, monospace; */
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 0 #080808;
+        -webkit-transition: ease-out 0.8s;
+        -moz-transition: ease-out 0.8s;
+        transition: ease-out 0.8s;
+        background-color: #b5876d;
+    }
+
+
+    .newsletter-input #button:hover {
+        /* bottom: 0; */
+        box-shadow: inset 0 100px 0 0 #0f0f0f;
+    }
+
+
+    .footer-area {
+        /* border: 1px solid red; */
+        height: 400px;
+        padding-top: 100px;
+        padding-bottom: 20px;
+        background-color: #212529;
+        color: white;
+    }
+
+    .footer-container {
+        /* border: 1px solid red; */
+        width: 65%;
+        margin: auto;
+    }
+
+    .row {
+        /* border: 1px solid red; */
+        display: flex;
+        /* grid-template-columns: repeat(4, 1fr); */
+        gap: 20px;
+    }
+
+    .first-cell {
+        /* border: 1px solid red; */
+        padding: 20px;
+        padding-top: 40px;
+        width: 25%;
+        margin-right: 50px;
+        line-height: 22px;
+
+    }
+
+    .first-cell img {
+        width: 44%;
+    }
+
+    .first-cell p {
+        /* border: 1px solid red; */
+        margin-top: 25px;
+        font-weight: 200;
+        font-size: 15px;
+        width: 90%;
+    }
+
+
+    .first-cell .footer-social {
+        margin-top: 40px;
+        /* border: 1px solid red; */
+        display: flex;
+        width: 70%;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+
+    .first-cell .footer-social i {
+        border: 1px solid #c0bcb7;
+        font-size: 15px;
+        padding: 8px;
+        color: #c0bcb7;
+        transition: 1.2s;
+
+    }
+
+    .first-cell .footer-social i:hover {
+        background-color: #b5876d;
+        color: #e9e5e0;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    }
+
+    .second-cell {
+        /* border: 1px solid red; */
+        padding: 10px;
+        line-height: 22px;
+        margin-right: 90px;
+
+    }
+
+    .second-cell h3 {
+        /* border: 1px solid red; */
+        margin-bottom: 30px !important;
+        margin-top: 15px;
+        line-height: 40px;
+        /* margin-bottom: 50px; */
+    }
+
+    .second-cell .address {
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 14px !important;
+        font-weight: 300 !important;
+    }
+
+    .second-cell .address i {
+        border: 1px solid rgb(231, 226, 226);
+        margin-right: 15px;
+        font-size: 15px;
+        color: #b5876d;
+        padding: 10px;
+        transition: 0.5s;
+
+    }
+
+    .second-cell .email {
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 15px !important;
+        font-weight: 300 !important;
+    }
+
+    .second-cell .email i {
+        border: 1px solid rgb(231, 226, 226);
+        margin-right: 15px;
+        font-size: 15px;
+        color: #b5876d;
+        padding: 8px;
+        transition: 0.5s;
+    }
+
+    .second-cell i:hover {
+        background-color: #e9e5e0;
+        transition-delay: color 0.5s ease;
+    }
+
+    .second-cell .phone {
+        /* border: 1px solid red; */
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        font-size: 15px !important;
+        font-weight: 300 !important;
+    }
+
+    .second-cell .phone i {
+        border: 1px solid rgb(231, 226, 226);
+        margin-right: 15px;
+        font-size: 15px;
+        color: #b5876d;
+        padding: 10px;
+        transition: 0.5s;
+
+    }
+
+    .third-cell {
+        /* border: 1px solid rgb(0, 255, 234); */
+        margin-right: 30px;
+    }
+
+    .third-cell h3 {
+        padding-top: 12px;
+        /* border: 1px solid rgb(0, 217, 255); */
+        margin-bottom: 50px;
+
+    }
+
+    .third_cell_data p {
+        /* border: 1px solid rgb(0, 255, 200); */
+        line-height: 14px;
+        font-weight: 200;
+        font-size: 15px;
+    }
+
+
+    .third_cell_data a:hover {
+        /* border: 1px solid rgb(0, 255, 200); */
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+
+    .third-cell a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    .fourth-cell {
+        /* border: 1px solid red; */
+        /* padding: 5px; */
+        margin: auto;
+
+    }
+
+    .fourth-cell h3 {
+        margin-bottom: 50px;
+    }
+
+    .fourth-cell .link_img {
+        /* border: 1px solid red; */
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 5px;
+        column-gap: 10px;
+    }
+
+    .bottom {
+        /* border: 1px solid red; */
+        margin-top: 70px;
+        background-color: #000;
+        height: 65px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* rahul */
+
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
+    header {
+        /* margin-top: 10px; */
+        /* border: 1px solid red; */
+        text-align: center;
+        background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+        height: 470px;
+        width: 100%;
+        /* position: relative; */
+        /* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+    }
+
+    .background-overlay {
+        height: 470px;
+        width: 100%;
+        background-color: rgba(2, 1, 0, 0.61);
+    }
+
+    .head {
+        /* border: 1px solid red; */
+        display: flex;
+        align-items: center;
+        height: 115px;
+        padding-top: 5px;
+        justify-content: space-evenly;
+        line-height: 1px;
+        background-color: #01050e1a;
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+
+    .logo {
+        /* border: 1px solid red; */
+        margin-left: 120px;
+        z-index: 1;
+    }
+
+
+    .head .logo ::after {
+        background: #b5876d none repeat scroll 0 0;
+        content: "";
+        height: 141px;
+        left: -5%;
+        position: absolute;
+        top: 0;
+        -webkit-transform: skewX(-34deg);
+        transform: skewX(-34deg);
+        min-width: 35%;
+        z-index: -1;
+    }
+
+    .navigation {
+        /* border: 1px solid red; */
+        /* margin: auto; */
+        height: 90%;
+        width: 45%;
+        padding-top: 10px;
+        line-height: 1px;
+        margin-right: 20px;
+    }
+
+    .navigation .navigation-top {
+        width: 80%;
+        /* border: 1px solid red; */
+        color: white;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    .navigation-top .header-contact {
+        font-size: 13px;
+    }
+
+    #contact-color {
+        color: #b5876d;
+    }
+
+
+    .social-links {
+        /* border: 1px solid red; */
+        width: 28%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .social-links i {
+        color: white;
+        /* border: 1px solid red; */
+
+    }
+
+    .social-links i:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+
+    .horizontal-line {
+        /* border: 1px solid red; */
+        width: 80%;
+        margin: auto;
+        content: " ";
+        display: block;
+        border-bottom: 0.25px solid #777777;
+
+    }
+
+    .navigation-bottom {
+        width: 80%;
+        margin: auto;
+        margin-top: 30px;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: start;
+        gap: 30px;
+    }
+
+    .navigation-bottom a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .dropdown a {
+        font-size: 14px;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+
+    .dropdown .dropdownbtn {
+        /* display: block; */
+        position: relative;
+        z-index: 1;
+    }
+
+
+    .dropdown>a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+        /* transition: background-color 0.5s ease-in-out; */
+    }
+
+    .dropdown:hover .submenu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .submenu {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        padding: 15px;
+        min-width: 160px;
+        z-index: 1;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        line-height: 10px;
+        margin-top: 8px;
+        text-align: start;
+
+    }
+
+    .submenu a {
+        display: block;
+        padding: 5px 10px;
+        color: #000;
+        text-decoration: none;
+
+    }
+
+    .submenu a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
+
+    .submenu-megamenu {
+        display: flex;
+        min-width: 400px;
+        min-height: 150px;
+        line-height: 15px;
+    }
+
+
+    .container {
+        /* border: 1px solid red; */
+        margin-top: 145px;
+    }
+
+    .container .center-text h1 {
+        /* border: 1px solid red; */
+        font-size: 35px;
+        font-weight: bolder;
+        color: white;
+    }
+
+    .container .center-text {
+        /* border: 1px solid red; */
+        color: white;
+        line-height: 18px;
+        padding-bottom: 80px;
+    }
+
+    .breadcrumb-bar {
+        width: 80%;
+        /* border: 1px solid red; */
+        margin: auto;
+        width: 60%;
+
+    }
+
+    .breadcrumb {
+        list-style-type: none;
+        /* border: 1px solid red; */
+        display: flex;
+        color: white;
+        font-size: 18px;
+    }
+
+    .breadcrumb #color-text {
+        color: #b5876d;
+        /* font-size: 18px; */
+    }
+
+    .breadcrumb a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .breadcrumb a:hover {
+        color: #b5876d;
+        transition: color 0.5s ease;
+    }
 </style>
 
 <body>
 
     <div class="main">
-        <div class="nav">
+        <!-- ! <div class="nav">
             <div class="logo">
                 <div>
                     <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
@@ -201,7 +808,10 @@
             </div>
 
             <div class="options">
+
+
                 <a href="" class="home">HOME</a>
+
                 <a href="">ROOMS</a>
                 <a href="">ACTIVITIES</a>
                 <a href="">LOCATION</a>
@@ -209,170 +819,435 @@
                 <a href="">TEAM</a>
                 <a href="">CONTACT</a>
             </div>
+
+            <!-- hover part -->
+
+        <!-- 
         </div>
+
         <h1>ROOM - LIST VIEW</h1>
 
         <p>A quality room of Oestin with sea or mountain view</p>
         <h3><a href="">HOME//</a>Room-List View</h3>
-    </div>
-    <div id="texts">
-        <h1>OUR ATR ROOMS</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis, eu <br>condimentum
-            massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
-    </div>
-    <div id="rooms">
 
-        <!-- <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/10.jpg" alt="">
+    </div>  --> -->
+
+        <!-- rahul -->
+
+        <header>
+            <div class="background-overlay">
+                <div class="head">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                        </a>
+                    </div>
+                    <div class="navigation">
+                        <div class="navigation-top">
+                            <div class="header-contact">
+                                <span id="contact-color">Contact:</span>
+                                <span>0123456789</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                                <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                                <a href="https://google.com"><i class="fa fa-google-plus"></i></a>
+                                <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                                <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                        <div class="horizontal-line">
+                            <!-- <hr color="#b5876d"> -->
+                        </div>
+                        <div class="mainmenu-hidden">
+                            <nav>
+                                <div class="navigation-bottom">
+                                    <div class="dropdown">
+                                        <a href="index.html">HOME</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a class="dropdownbtn">ROOMS</a>
+                                        <div class="submenu">
+                                            <a href="">ROOM LIST</a><br>
+                                            <a href="">ROOM DETAILS</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown">
+                                        <a href="#" class="dropdownbtn">ACTIVITIES</a>
+                                        <div class="submenu">
+                                            <div class="submenu-megamenu">
+                                                <div class="first">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Location</a>
+                                                    <a href="">Room Grid</a>
+                                                    <a href="">Room List</a>
+                                                    <a href="">Room Details</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+
+                                                <div class="second">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Event</a>
+                                                    <a href="">Mega Menu</a>
+                                                    <a href="">Contact</a>
+                                                    <a href="">Team</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+
+                                                <div class="second">
+                                                    <a href="#">MEGAMENU LIST</a>
+                                                    <a href="">Room List</a>
+                                                    <a href="">Mega Menu</a>
+                                                    <a href="">Room Grid</a>
+                                                    <a href="">Room Details</a>
+                                                    <a href="">Mega Menu</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">LOCATION</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">EVENT</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">TEAM</a>
+                                    </div>
+                                    <div class="dropdown">
+                                        <a href="">CONTACT</a>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+
+                <section>
+                    <div class="container">
+                        <div class="center-text">
+                            <h1>ROOM LIST VIEW</h1>
+                            <p>A quality room of Oestin with sea or mountain view</p>
+                        </div>
+                        <div class="breadcrumb-bar">
+                            <div class="breadcrumb">
+                                <span><a href="index.html">Home</a>
+                                    <span>//</span> <span id="color-text"></span></span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <div id="char">
-                <h1>Single Room</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
+        </header>
+
+
+        <div id="texts">
+            <h1>OUR ATR ROOMS</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis, eu
+                <br>condimentum
+                massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
         </div>
-        <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/11.jpg" alt="">
-            </div>
-            <div id="char">
-                <h1>Royal Suit</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
+
+        <div id="room">
+
+        < <!-- //pagination -->
+        let totalPages = Math.ceil(data.length / rowsPerPage);
+        let pagination = document.querySelector(".pagination");
+        pagination.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+          let link = document.createElement("a");
+          link.href = "#";
+          link.innerText = i;
+          if (i === currentPage) {
+            link.classList.add("active");
+          }
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            fetchData(i);
+          });
+      
+          PaginationWrapper.appendChild(link);
+          }
+
+        let startIndex = (currentPage - 1) * rowsPerPage;
+  let endIndex = startIndex + rowsPerPage;
+  let paginatedData = data.slice(startIndex, endIndex);
+  let currentPage = 1;
+let rowsPerPage = 3;
+
+function fetchData(page = 1) {
+    fetch(`${url}`)
+      .then(function (res) {
+        return res.json();
+      })
+      .then(function (data) {
+        currentPage = page;
+        travelodata = data;
+        display(data);
+      })
+      .catch(function (e) {
+        console.log(e);
+      })
+  }
+
+
+
+
         </div>
-        <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/12.jpg" alt="">
-            </div>
-            <div id="char">
-                <h1>Delux Suit</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
+      
+        <div id="images">
+            <img src="https://htmldemo.net/oestin/oestin/img/client/1.png" alt="">
+            <img src="https://htmldemo.net/oestin/oestin/img/client/2.png" alt="">
+            <img src="https://htmldemo.net/oestin/oestin/img/client/3.png" alt="">
+            <img src="https://htmldemo.net/oestin/oestin/img/client/4.png" alt="">
+            <img src="https://htmldemo.net/oestin/oestin/img/client/5.png" alt="">
         </div>
-        <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/13.jpg" alt="">
-            </div>
-            <div id="char">
-                <h1>Double Room</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
-        </div>
-        <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/14.jpg" alt="">
-            </div>
-            <div id="char">
-                <h1>Single Room</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
-        </div>
-        <div id="cards">
-            <div>
-                <img src="https://htmldemo.net/oestin/oestin/img/room/15.jpg" alt="">
-            </div>
-            <div id="char">
-                <h1>Deluxe Room</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod hytt tempor incididuc utd
-                    <br>
-                    labore et dolore magna aliqua. Ut enim ad minim yttveniam, quis nostrud exercitation csdd ullamco
-                    <br> laboris ed do eiusmod hytt
-                </p>
-                <h2>Room Facility</h2>
-                <p>Breakfast Include , Free wi-fi , Private Balcony , Free Newspaper , Full AC, <br> Beach View ,
-                    Sweeming Pool</p>
-            </div>
-        </div> -->
-    </div>
-    <div id="images">
-        <img src="https://htmldemo.net/oestin/oestin/img/client/1.png" alt="">
-        <img src="https://htmldemo.net/oestin/oestin/img/client/2.png" alt="">
-        <img src="https://htmldemo.net/oestin/oestin/img/client/3.png" alt="">
-        <img src="https://htmldemo.net/oestin/oestin/img/client/4.png" alt="">
-        <img src="https://htmldemo.net/oestin/oestin/img/client/5.png" alt="">
-    </div>
-    <br>
-    <br>
-    <br>
-    <div id="inputs">
+        <br>
+        <br>
+        <br>
+        <!-- <div id="inputs">
         <h2>NEWSLETTER SIGN-UP</h2>
         <input type="email" name="" id="mail" placeholder="enter your email"><button>subscribe</button>
     </div>
+
     <footer>
         <div id="biggest">
-            <div id="first">
-                <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
-                <p>Lorem ipsum dolor sit amet, conse acteir <br> our adipisicing elit, sed do eiusmod the a <br> tempor
-                    the incididunt ut labore et dolore <br> magnaa liqua. Ut enim minimn.</p>
-                <div id="links">
-                    <a href="">🍹</a>
-                    <a href="">💎</a>
-                    <a href="">🌏</a>
-                    <a href="">🌃</a>
-                    <a href="">💰</a>
+            <div id="bigin">
+                <div id="first">
+                    <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png" alt="">
+                    <p>Lorem ipsum dolor sit amet, conse acteir <br> our adipisicing elit, sed do eiusmod the a <br>
+                        tempor
+                        the incididunt ut labore et dolore <br> magnaa liqua. Ut enim minimn.</p>
+                    <div id="links">
+                        <a href="">🍹</a>
+                        <a href="">💎</a>
+                        <a href="">🌏</a>
+                        <a href="">🌃</a>
+                        <a href="">💰</a>
+                    </div>
+                </div>
+                <div id="second">
+                    <h4>CONTACT US</h4>
+                    <a href="">📍Your address goes here </a> <br>
+                    <a href="">💬demo@example.com</a> <br>
+                    <a href="">📲0123456789</a>
+                </div>
+                <div id="third">
+                    <h4>QUICK LINKS</h4>
+                    <a href="">Home</a> <br>
+                    <a href="">Stuffs</a> <br>
+                    <a href="">Suits & Rooms</a> <br>
+                    <a href="">Event</a> <br>
+                    <a href="">Location</a> <br>
+                    <a href="">Contact</a>
+                </div>
+                <div id="fourth">
+                    <h4>COLLECTIONS</h4>
+                    <div id="small">
+                        <div>
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt="">
+
+
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt="">
+
+
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt="">
+
+                        </div>
+                        <div>
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt="">
+
+
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt="">
+
+
+                            <img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt="">
+
+
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="second">
-                <h4>CONTACT US</h4>
-                <a href="">📍Your address goes here </a> <br>
-                <a href="">💬demo@example.com</a> <br>
-                <a href="">📲0123456789</a>
-            </div>
-            <div id="third">
-                <h4>QUICK LINKS</h4>
-                <a href="">Home</a>
-                <a href="">Stuffs</a>
-                <a href="">Suits & Rooms</a>
-                <a href="">Event</a>
-                <a href="">Location</a>
-                <a href="">Contact</a>
-            </div>
-            <div id="fourth">
-                <h4>COLLECTIONS</h4>
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-            </div>
         </div>
-    </footer>
+    </footer> -->
+
+        <section class="newsletter">
+            <div class="newsletter-container">
+                <h3>NEWSLETTER SIGN-UP</h3>
+                <div class="newsletter-input">
+                    <input type="text" placeholder="Enter your E-mail" id="search">
+                    <input type="button" value="SUBSCRIBE" id="button">
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-area">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="first-cell">
+                        <div class="footer-logo">
+                            <a href="index.html">
+                                <img src="https://htmldemo.net/oestin/oestin/img/logo/logo.png">
+                            </a>
+                        </div>
+                        <p>Lorem ipsumdolor sit amet, conse acteir our
+                            adipisicing elit, sed do eiusrnod the a ten-vor
+                            the inddidunt ut labore et dolore magnaa
+                            liqua Ut enim minimn.</p>
+                        <div class="footer-social">
+                            <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
+                            <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
+                            <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
+                            <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
+                            <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="second-cell">
+                        <h3>CONTACT US</h3>
+                        <div class="address">
+                            <span class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span>
+                                Your address <br> goes here
+                            </span>
+                        </div>
+                        <div class="email">
+                            <span class="icon">
+                                <i class="fa fa-envelope-o"></i>
+                            </span>
+                            <span>
+                                demo@example.com <br>
+                                demo@example.com
+                            </span>
+                        </div>
+                        <div class="phone">
+                            <span class="icon">
+                                <i class="fas fa-phone-square-alt"></i>
+                            </span>
+                            <span>
+                                0123456789 <br>
+                                0123456789
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="third-cell">
+                        <h3>QUICK LINKS</h3>
+                        <div class="third_cell_data">
+                            <p><a href="">Home</a></p>
+                            <p><a href="">Stuff</a></p>
+                            <p><a href="">Suits & Rooms</a></p>
+                            <p><a href="">Event</a></p>
+                            <p><a href="">Location</a></p>
+                            <p><a href="">Contact</a></p>
+                        </div>
+                    </div>
+
+                    <div class="fourth-cell">
+                        <h3>COLLECTIONS</h3>
+                        <div class="link_img">
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/1.jpg" alt=""></a>
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/2.jpg" alt=""></a>
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/3.jpg" alt=""></a>
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/4.jpg" alt=""></a>
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/5.jpg" alt=""></a>
+                            <a href=""><img src="https://htmldemo.net/oestin/oestin/img/footer/6.jpg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>© 2021 Oestin</p>
+            </div>
+        </footer>
+
+
+
+
 </body>
+<script>
+    let room = document.getElementById("room")
+    const API = "https://645360a0e9ac46cedf23a59b.mockapi.io/rooms"
+    fetch(API).then(function (res) {
+        return res.json();
+    }).then(function (data) {
+        console.log(data);
+        DisplayData(data)
+    }).catch(function (exe) {
+        console.log(exe);
+    })
+    
+// pagination
+let totalPages = Math.ceil(data.length / rowsPerPage);
+        let pagination = document.querySelector(".pagination");
+        pagination.innerHTML = "";
+        for (let i = 1; i <= totalPages; i++) {
+          let link = document.createElement("a");
+          link.href = "#";
+          link.innerText = i;
+          if (i === currentPage) {
+            link.classList.add("active");
+          }
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            fetchData(i);
+          });
+      
+          PaginationWrapper.appendChild(link);
+          }
+
+        
+
+
+    function DisplayData(data) {
+        room.innerHTML = ""
+        for (let i = 0; i < data.length; i++) {
+            let cardList = document.createElement("div")
+            cardList.className = "card-list"
+
+            let card = document.createElement("div")
+            card.className = "card"
+            card.setAttribute("data-id", data[i].id)
+
+            let cardImage = document.createElement("div")
+            cardImage.className = "card-img"
+
+            let img = document.createElement("img")
+            img.className = "employee-img"
+            img.src = data[i].image;
+
+            let team = document.createElement("div")
+            team.className = "team"
+
+            let type = document.createElement("h4")
+            type.className = "type"
+            type.textContent = data[i].type;
+
+            let facilities = document.createElement("p")
+            facilities.className = "facilities"
+            facilities.textContent = data[i].facilities;
+
+            let description = document.createElement("p")
+            description.className = "description"
+            description.textContent = data[i].description;
+
+            cardImage.append(img)
+            team.append(type, description, facilities)
+            card.append(cardImage, team)
+            cardList.append(card)
+
+
+            room.append(cardList)
+
+        }
+    }
+
+
+
+</script>
 
 </html>
