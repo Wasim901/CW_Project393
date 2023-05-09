@@ -90,21 +90,14 @@ loginForm.addEventListener('submit', (e) => {
 
     // Reset the form fields
     
-   function myFunction() {
-    setTimeout(() => {
-        // location.replace("http://127.0.0.1:5500/hotel2.html")
-        console.log('Why is this asshole this not working ???')
-    }, 1000)
-
-}
+    function myFunction() {
+        setTimeout(() => {
+          document.body.style.opacity = 0;
+          window.location.href = "hotel2.html";
+        }, 1000);
+        setTimeout(() => {
+          document.body.style.opacity = 1;
+        }, 2000);
+      }
 });
-
-
-
-
-
-
-
-
-
 

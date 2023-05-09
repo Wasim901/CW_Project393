@@ -1,12 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
     <script src="https://kit.fontawesome.com/76596154e5.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+	body {
+		font-family: 'Roboto', sans-serif;
+		padding: 0px;
+		margin: 0px;
+	}
+
+
+	body::-webkit-scrollbar {
+		display: none;
+	}
+
+	header {
+		/* margin-top: 10px; */
+		/* border: 1px solid red; */
+		text-align: center;
+		background-image: url("https://htmldemo.net/oestin/oestin/img/bg/3.jpg");
+		height: 470px;
+		width: 100%;
+		/* position: relative; */
+		/* background: rgba(0, 0, 0, 0.349) none repeat scroll; */
+	}
+
+	.background-overlay {
+		height: 470px;
+		width: 100%;
+		background-color: rgba(2, 1, 0, 0.61);
+	}
+
+	.head {
+		/* border: 1px solid red; */
+		display: flex;
+		align-items: center;
+		height: 115px;
+		padding-top: 5px;
+		justify-content: space-evenly;
+		line-height: 1px;
+		background-color: #01050e1a;
+		position: relative;
+		/* overflow: hidden; */
+	}
+
+
+	.logo {
+		/* border: 1px solid red; */
+		margin-left: 120px;
+		z-index: 1;
+	}
+
+
+	.head .logo ::after {
+		background: #b5876d none repeat scroll 0 0;
+		content: "";
+		height: 141px;
+		left: -5%;
+		position: absolute;
+		top: 0;
+		-webkit-transform: skewX(-34deg);
+		transform: skewX(-34deg);
+		min-width: 35%;
+		z-index: -1;
+	}
+
+	.navigation {
+		/* border: 1px solid red; */
+		/* margin: auto; */
+		height: 90%;
+		width: 45%;
+		padding-top: 10px;
+		line-height: 1px;
+		margin-right: 20px;
+	}
+
+	.navigation .navigation-top {
+		width: 80%;
+		/* border: 1px solid red; */
+		color: white;
+		margin: auto;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 20px;
+	}
+
+	.navigation-top .header-contact {
+		font-size: 13px;
+	}
+
+	#contact-color {
+		color: #b5876d;
+	}
+
+
+	.social-links {
+		/* border: 1px solid red; */
+		width: 28%;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.social-links i {
+		color: white;
+		/* border: 1px solid red; */
+
+	}
+
+	.social-links i:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.horizontal-line {
+		/* border: 1px solid red; */
+		width: 80%;
+		margin: auto;
+		content: " ";
+		display: block;
+		border-bottom: 0.25px solid #777777;
+
+	}
+
+	.navigation-bottom {
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
+		/* border: 1px solid red; */
+		display: flex;
+		justify-content: start;
+		gap: 30px;
+	}
+
+	.navigation-bottom a {
+		color: white;
+		text-decoration: none;
+	}
+
+	.dropdown a {
+		font-size: 14px;
+	}
+
+	.dropdown {
+		position: relative;
+		display: inline-block;
+	}
+
+
+	.dropdown .dropdownbtn {
+		/* display: block; */
+		position: relative;
+		z-index: 1;
+	}
+
+
+	.dropdown>a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+		/* transition: background-color 0.5s ease-in-out; */
+	}
+
+	.dropdown:hover .submenu {
+		display: block;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.submenu {
+		opacity: 0;
+		visibility: hidden;
+		transition: opacity 0.5s ease, visibility 0.5s ease;
+		display: none;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background-color: #ffffff;
+		padding: 15px;
+		min-width: 160px;
+		z-index: 1;
+		box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+		line-height: 10px;
+		margin-top: 8px;
+		text-align: start;
+		
+	}
+
+	.submenu a {
+		display: block;
+		padding: 5px 10px;
+		color: #000;
+		text-decoration: none;
+
+	}
+
+	.submenu a:hover {
+		color: #b5876d;
+		transition: color 0.5s ease;
+	}
+
+	.submenu-megamenu {
+		display: flex;
+		min-width: 400px;
+		min-height: 150px;
+		line-height: 15px;
+	}
+
+
+	.container {
+		/* border: 1px solid red; */
+		margin-top: 145px;
+	}
+
+	.container .center-text h1 {
+		/* border: 1px solid red; */
+		font-size: 35px;
+		font-weight: bolder;
+		color: white;
+	}
+
+	.container .center-text {
+		/* border: 1px solid red; */
+		color: white;
+		line-height: 18px;
+		padding-bottom: 80px;
+	}
+
+	.breadcrumb-bar {
+		width: 80%;
+		/* border: 1px solid red; */
+		margin: auto;
+		width: 60%;
+
+	}
+
+	.breadcrumb {
+		list-style-type: none;
+		/* border: 1px solid red; */
+		display: flex;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb #color-text {
+		color: #b5876d;
+		/* font-size: 18px; */
+	}
+
+	.breadcrumb a {
+		text-decoration: none;
+		color: white;
+		font-size: 18px;
+	}
+
+	.breadcrumb a:hover {
+=======
     <!-- <link rel="stylesheet" href="./index.css" type="text/css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -772,16 +1026,14 @@
     }
 
     .social-links i:hover {
+
         color: #b5876d;
         transition: color 0.5s ease;
     }
 
-
-    </style>
-</head>
-
+</style>
 <body>
-    <header>
+	<header>
         <div class="background-overlay">
             <div class="head">
                 <div class="logo">
@@ -887,249 +1139,5 @@
             </section>
         </div>
     </header>
-
-
-
-    <section>
-        <div class="middle">
-            <div class="our-special-staff">
-                <h2>OUR SPECIAL STAFF</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellente sque vel volutpat felis,
-                    eu condimentum massa. Pellentesque mollis eros vel mattis tempor. Aliquam</p>
-            </div>
-            <div class="staff_data">
-                <!-- append the data here -->
-            </div>
-            <div class="pagination-button">
-                <!-- buttons here -->
-            </div>
-        </div>
-    </section>
-    <div class="client">
-        <div class="client-image">
-            <div class="image">
-                <div>
-                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/1.png"></a>
-                </div>
-                <div>
-                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/2.png"></a>
-                </div>
-                <div>
-                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/3.png"></a>
-                </div>
-                <div>
-                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/4.png"></a>
-                </div>
-                <!-- <div>
-                    <a href="#"><img src="https://htmldemo.net/oestin/oestin/img/client/5.png"></a>
-                </div> -->
-            </div>
-        </div>
-    </div>
-    <section class="newsletter">
-        <div class="newsletter-container">
-            <h3>NEWSLETTER SIGN-UP</h3>
-            <div class="newsletter-imput">
-                <input type="text" placeholder="Enter your E-mail">
-                <input type="button" value="SUBSCRIBE">
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer-area">
-        <div class="footer-container">
-            <div class="row">
-                <div class="first-cell">
-                    <div class="footer-logo">
-                        <a href="index.html">
-                            <img src="./logo.webp">
-                        </a>
-                    </div>
-                    <p>Lorem ipsumdolor sit amet, conse acteir our
-                        adipisicing elit, sed do eiusrnod the a ten-vor
-                        the inddidunt ut labore et dolore magnaa
-                        liqua Ut enim minimn.</p>
-                    <div class="footer-social">
-                        <a href="https://facebook.com"><i class="fa fa-facebook-f"></i></a>
-                        <a href="https://twitter.com"><i class="fa fa-twitter"></i></a>
-                        <a href="https://instagram.com"><i class="fa fa-instagram"></i></a>
-                        <a href="https://google.com"><i class="fas fa-rss-square"></i></a>
-                        <a href="https://pintrest.com"><i class="fa fa-pinterest-p"></i></a>
-                    </div>
-                </div>
-
-                <div class="second-cell">
-                    <h3>CONTACT US</h3>
-                    <div class="address">
-                        <span>
-                            <i class="fas fa-map-marker-alt"></i>
-                        </span>
-                        <span>
-                            Your address <br> goes here
-                        </span>
-                    </div>
-                    <div class="email">
-                        <span>
-                            <i class="fa fa-envelope-o"></i>
-                        </span>
-                        <span>
-                            demo@example.com <br>
-                            demo@example.com
-                        </span>
-                    </div>
-                    <div class="phone">
-                        <span>
-                            <i class="fas fa-phone-square-alt"></i>
-                        </span>
-                        <span>
-                            0123456789 <br>
-                            0123456789
-                        </span>
-                    </div>
-                </div>
-
-                <div class="third-cell">
-                    <h3>QUICK LINKS</h3>
-                    <ul>
-                        <li>
-                            <a href="">Home</a>
-                        </li>
-                        <li>
-                            <a href="">Stuff</a>
-                        </li>
-                        <li>
-                            <a href="">Suits & Rooms</a>
-                        </li>
-                        <li>
-                            <a href="">Event</a>
-                        </li>
-                        <li>
-                            <a href="">Location</a>
-                        </li>
-                        <li>
-                            <a href="">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="fourth-cell">
-                    <h3>COLLECTIONS</h3>
-
-                </div>
-            </div>
-        </div>
-    </footer>
-
 </body>
-<script>
-    let staff = document.querySelector(".staff_data")
-    let page = document.querySelector(".pagination-button")
-    fetchData(1)
-    
-    async function fetchData(num) {
-        console.log(num)
-        try {
-            let res = await fetch(`https://645360a0e9ac46cedf23a59b.mockapi.io/staff`)
-            // let total = res.headers.get("X-Total-Count");
-            // let page = Math.ceil(total / 10);
-            // console.log(res.headers)
-            // paginationWrapper.innerHTML = "";
-
-            // for (let i = 1; i <= page; i++) {
-            // paginationWrapper.append(createButton(i));
-            // }
-            let data = await res.json()
-            console.log(data)
-            DisplayData(data)
-        }
-        catch (err) {
-            console.log(err)
-        }
-
-    //    fetch("https://645360a0e9ac46cedf23a59b.mockapi.io/staff")
-    //    .then((res)=>{
-    //         return res.json()
-    //    })
-    //    .then((data)=>{
-    //         console.log(data)
-    //         DisplayData(data)
-    //    })     
-    //    .catch((err)=>{
-    //     console.log(err)
-    //    })
-
-    }
-
-
-    
-        function createButton(id) {
-        let button = document.createElement("button");
-        button.className = "pagination-button"
-        button.setAttribute("data-page-number", id)
-        button.textContent = id
-        button.addEventListener("click", ()=>{
-            fetchData(id);
-        })
-        return button;
-        }
-
-
-
-    function DisplayData(data) {
-        staff.innerHTML = ""
-        for(let i=0;i<data.length;i++){
-        let cardList = document.createElement("div")
-        cardList.className = "card_list"
-
-        let card = document.createElement("div")
-        card.className = "card"
-        card.setAttribute("data-id", data[i].id)
-
-        let cardImage = document.createElement("div")
-        cardImage.className = "card_img"
-
-        let img = document.createElement("img")
-        img.className = "employee_img"
-        img.src = data[i].image;
-
-        let teamHover = document.createElement("div")
-        teamHover.className = "teamHover"
-
-        let name = document.createElement("h4")
-        name.className = "text"
-        name.textContent = data[i].name;
-
-        let designation = document.createElement("span")
-        designation.className = "text"
-        designation.textContent = `(${data[i].designation})`;
-
-        let description = document.createElement("p")
-        description.className = "text"
-        description.textContent = data[i].description;
-
-        cardImage.append(img)
-
-        teamHover.append(name, designation, description)
-
-        card.append(cardImage, teamHover)
-        // data.forEach(item => {
-        cardList.append(card)
-        
-            
-            // })
-        staff.append(cardList)
-
-        }
-
-    }
-    // card()
-
-    window.addEventListener("load", function(){
-        fetchData(1)
-    })
-
-
-
-</script>
-
 </html>

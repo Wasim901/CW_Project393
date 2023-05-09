@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin Site</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.all.min.js"></script>
+    
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
+    <style>
+        /* Reset styles */
+        * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+}
+
+/* Header styles */
+header {
+  background-color: #00539C;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: goldenrod;
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  vertical-align: middle;
+}
+
+/* Button styles */
+button {
+  background-color: #b5876d;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #002F5D;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  width: 80%;
+  max-width: 600px;
+}
+
+.modal-header h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Offers Redeemed styles */
+.offers-redeemed {
+  margin-top: 2rem;
+  font-weight: bold;
+}
+
+.offers-redeemed span {
+  margin-right: 0.5rem;
+}
+
+/* Admin site styles */
+.admin-site {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.admin-site h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.admin-site table {
+  font-size: 0.9rem;
+}
+
+.admin-site th, .admin-site td {
+  padding: 1rem;
+}
+
+.admin-site td:nth-child(1) {
+  text-align: left;
+}
+
+.admin-site td:nth-child(3) {
+  text-align: center;
+}
+
+.admin-site td:nth-child(4) {
+  text-align: center;
+}
+
+.admin-site button {
+  font-size: 0.8rem;
+  
+}
+
+      </style>
+</head>
+<body>
+    <div class="admin-site"><h1>Oestin's Admin Site</h1></div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Password</th>
+                <th>Actions</th>
+                <th>Offers Redeemed</th>
+            </tr>
+        </thead>
+        <tbody id="usersTable">
+        </tbody>
+    </table>
+    
+    <script>
+      // Get the users array from local storage
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+const usersTable = document.getElementById('usersTable');
+
+users.forEach((user, index) => {
+  const row = document.createElement('tr');
+  row.id = `user-${index}`; // Add ID to row element
+  const email = document.createElement('td');
+  email.classList.add('user-data'); // Add class to email td
+  email.textContent = user.email;
+  const password = document.createElement('td');
+  password.classList.add('user-data'); // Add class to password td
+  password.textContent = user.password;
+  const actions = document.createElement('td');
+  const editButton = document.createElement('button');
+  editButton.textContent = 'Edit';
+  editButton.addEventListener('click', () => {
+    // Code to edit user data
+  });
+  const deleteButton = document.createElement('button');
+  deleteButton.textContent = 'Delete';
+  deleteButton.addEventListener('click', () => {
+    Swal.fire({
+        title: 'Are you sure?',
+        text: 'You won\'t be able to revert this!',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes, delete it!',
+        cancelButtonText: 'No, cancel!',
+        reverseButtons: true
+    }).then((result) => {
+        if (result.isConfirmed) {
+            const index = users.findIndex(u => u.email === user.email && u.password === user.password);
+            if (index > -1) {
+                users.splice(index, 1);
+                localStorage.setItem('users', JSON.stringify(users));
+                row.remove();
+            }
+            Swal.fire(
+                'Deleted!',
+                'User\'s data has been deleted.',
+                'success'
+            )
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire(
+                'Cancelled',
+                'user\'s data is safe :)',
+                'error'
+            )
+        }
+    })
+});
+
+  const offersRedeemed = document.createElement('td');
+  offersRedeemed.classList.add('user-data'); // Add class to offersRedeemed td
+  offersRedeemed.textContent = Math.floor(Math.random() * 10) + 1; // generates a random number between 1 and 10
+  actions.appendChild(editButton);
+  actions.appendChild(deleteButton);
+  row.appendChild(email);
+  row.appendChild(password);
+  row.appendChild(actions);
+  row.appendChild(offersRedeemed);
+  usersTable.appendChild(row);
+});
+
+
+// Add CSS style for user-data class
+const userStyle = document.createElement('style');
+userStyle.textContent = `
+.user-data {
+  font-size: 20px;
+}`;
+
+document.head.appendChild(userStyle);
+
+
+    </script>
+    
+
+  
+  
+</body>
+</html>

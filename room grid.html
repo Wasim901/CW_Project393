@@ -68,9 +68,15 @@ main {
     opacity: 0.5;
     z-index: 1;
   }
+  @media only screen and (max-width: 800px) {
+
+.mainmenu-hidden{
+ display:none;
+}
+}
   
   .imgdiv1text {
-    position: absolute;
+    position: absolute  ;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -90,6 +96,8 @@ main {
   animation: slideIn 0.5s forwards;
 }
 
+
+
 @keyframes slideIn {
   from {
     transform: translateX(100%);
@@ -100,6 +108,7 @@ main {
 }
 
 .price {
+  
   position: absolute;
   top:40%;
 left: 23%;
@@ -589,7 +598,7 @@ body {
 
 	.breadcrumb #color-text {
 		color: #b5876d;
-		/* font-size: 18px; */
+		
 	}
 
 	.breadcrumb a {
