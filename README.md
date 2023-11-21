@@ -15,4 +15,4 @@ The Hotel Service website 🏨 is a remarkable online platform developed within 
 Snapshot:
 
 
-<img src="https://github.com/Wasim901/CW_Project393/assets/119388217/2d195ebd-003c-4047-802d-fb473a3e138d" width="500px" height="500px">
+<img src="https://github.com/Wasim901/CW_Project393/assets/119388217/2d195ebd-003c-4047-802d-fb473a3e138d" width="800px" height="500px">
